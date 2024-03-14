@@ -16,5 +16,6 @@ namespace visualizador_de_algoritmos
         {
             InitializeComponent();
         }
+
     }
 }
