@@ -117,4 +117,59 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="txtCodigo.Text" xml:space="preserve">
+    <value>// Optimized C# implementation of Bubble sort
+using System;
+ 
+class GFG {
+    // An optimized version of Bubble Sort
+    static void bubbleSort(int[] arr, int n)
+    {
+        int i, j, temp;
+        bool swapped;
+        for (i = 0; i &lt; n - 1; i++) {
+            swapped = false;
+            for (j = 0; j &lt; n - i - 1; j++) {
+                if (arr[j] &gt; arr[j + 1]) {
+                     
+                    // Swap arr[j] and arr[j+1]
+                    temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    swapped = true;
+                }
+            }
+ 
+            // If no two elements were
+            // swapped by inner loop, then break
+            if (swapped == false)
+                break;
+        }
+    }
+ 
+    // Function to print an array
+    static void printArray(int[] arr, int size)
+    {
+        int i;
+        for (i = 0; i &lt; size; i++)
+            Console.Write(arr[i] + " ");
+        Console.WriteLine();
+    }
+ 
+    // Driver method
+    public static void Main()
+    {
+        int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
+        int n = arr.Length;
+
+        bubbleSort(arr, n);
+        Console.WriteLine("Sorted array:");
+        printArray(arr, n);
+    }
+}
+// This code is contributed by Sam007</value>
+  </data>
 </root>

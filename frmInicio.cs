@@ -20,7 +20,7 @@ namespace visualizador_de_algoritmos
         private Form currentChildForm;
 
         //Structs
-        private struct RGBColors
+        public struct RGBColors
         {
             public static Color verde = Color.FromArgb(72, 238, 46);
             public static Color amarillo = Color.FromArgb(238, 203, 24);
@@ -31,7 +31,9 @@ namespace visualizador_de_algoritmos
 
             public static Color colorPanel = Color.FromArgb(1, 9, 9);
             public static Color colorPanel2 = Color.FromArgb(221, 235, 235);
-            public static Color colorTexto = Color.FromArgb(227, 252, 247);
+            public static Color colorTexto = Color.FromArgb(227, 252, 247);//
+            public static Color colorFondoCodigo = Color.FromArgb(39, 40, 34);
+
         }
 
         public frmInicio()
