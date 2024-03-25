@@ -29,33 +29,36 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCodigo));
             this.panelContenido = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnCopiarCodigo = new FontAwesome.Sharp.IconButton();
-            this.btnJS = new FontAwesome.Sharp.IconButton();
-            this.btnPython = new FontAwesome.Sharp.IconButton();
-            this.btnCSharp = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbAlgoritmo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.txtCodigo = new System.Windows.Forms.RichTextBox();
+            this.txtCodigoPython = new System.Windows.Forms.TabControl();
+            this.tabPageCSharp = new System.Windows.Forms.TabPage();
+            this.tabPageJavascript = new System.Windows.Forms.TabPage();
+            this.tabPagePython = new System.Windows.Forms.TabPage();
+            this.txtCodigoJavascript = new System.Windows.Forms.RichTextBox();
+            this.txtCodigoCSharp = new System.Windows.Forms.RichTextBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.btnCopiarCodigo = new FontAwesome.Sharp.IconButton();
             this.panelContenido.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel8.SuspendLayout();
+            this.txtCodigoPython.SuspendLayout();
+            this.tabPageCSharp.SuspendLayout();
+            this.tabPageJavascript.SuspendLayout();
+            this.tabPagePython.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelContenido
             // 
+            this.panelContenido.Controls.Add(this.btnCopiarCodigo);
             this.panelContenido.Controls.Add(this.panel3);
             this.panelContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenido.Location = new System.Drawing.Point(0, 0);
@@ -90,106 +93,12 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.panel4.Controls.Add(this.panel8);
-            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.txtCodigoPython);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 10);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(770, 391);
             this.panel4.TabIndex = 0;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(9)))), ((int)(((byte)(9)))));
-            this.panel5.Controls.Add(this.btnCopiarCodigo);
-            this.panel5.Controls.Add(this.btnJS);
-            this.panel5.Controls.Add(this.btnPython);
-            this.panel5.Controls.Add(this.btnCSharp);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(770, 44);
-            this.panel5.TabIndex = 0;
-            // 
-            // btnCopiarCodigo
-            // 
-            this.btnCopiarCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(34)))));
-            this.btnCopiarCodigo.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCopiarCodigo.FlatAppearance.BorderSize = 0;
-            this.btnCopiarCodigo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCopiarCodigo.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCopiarCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
-            this.btnCopiarCodigo.IconChar = FontAwesome.Sharp.IconChar.Clipboard;
-            this.btnCopiarCodigo.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
-            this.btnCopiarCodigo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCopiarCodigo.IconSize = 36;
-            this.btnCopiarCodigo.Location = new System.Drawing.Point(714, 0);
-            this.btnCopiarCodigo.Name = "btnCopiarCodigo";
-            this.btnCopiarCodigo.Size = new System.Drawing.Size(56, 44);
-            this.btnCopiarCodigo.TabIndex = 4;
-            this.btnCopiarCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCopiarCodigo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnCopiarCodigo.UseVisualStyleBackColor = false;
-            this.btnCopiarCodigo.Click += new System.EventHandler(this.btnCopiarCodigo_Click);
-            this.btnCopiarCodigo.MouseHover += new System.EventHandler(this.btnCopiarCodigo_MouseHover);
-            // 
-            // btnJS
-            // 
-            this.btnJS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(34)))));
-            this.btnJS.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnJS.FlatAppearance.BorderSize = 0;
-            this.btnJS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
-            this.btnJS.IconChar = FontAwesome.Sharp.IconChar.Js;
-            this.btnJS.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
-            this.btnJS.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnJS.IconSize = 36;
-            this.btnJS.Location = new System.Drawing.Point(191, 0);
-            this.btnJS.Name = "btnJS";
-            this.btnJS.Size = new System.Drawing.Size(90, 44);
-            this.btnJS.TabIndex = 3;
-            this.btnJS.UseVisualStyleBackColor = false;
-            this.btnJS.MouseHover += new System.EventHandler(this.btnJS_MouseHover);
-            // 
-            // btnPython
-            // 
-            this.btnPython.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(34)))));
-            this.btnPython.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnPython.FlatAppearance.BorderSize = 0;
-            this.btnPython.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPython.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
-            this.btnPython.IconChar = FontAwesome.Sharp.IconChar.Python;
-            this.btnPython.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
-            this.btnPython.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPython.IconSize = 36;
-            this.btnPython.Location = new System.Drawing.Point(96, 0);
-            this.btnPython.Name = "btnPython";
-            this.btnPython.Size = new System.Drawing.Size(95, 44);
-            this.btnPython.TabIndex = 1;
-            this.btnPython.UseVisualStyleBackColor = false;
-            this.btnPython.MouseHover += new System.EventHandler(this.btnPython_MouseHover);
-            // 
-            // btnCSharp
-            // 
-            this.btnCSharp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(34)))));
-            this.btnCSharp.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnCSharp.FlatAppearance.BorderSize = 0;
-            this.btnCSharp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCSharp.Font = new System.Drawing.Font("Segoe UI Black", 14F, System.Drawing.FontStyle.Bold);
-            this.btnCSharp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
-            this.btnCSharp.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnCSharp.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
-            this.btnCSharp.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCSharp.IconSize = 36;
-            this.btnCSharp.Location = new System.Drawing.Point(0, 0);
-            this.btnCSharp.Name = "btnCSharp";
-            this.btnCSharp.Size = new System.Drawing.Size(96, 44);
-            this.btnCSharp.TabIndex = 2;
-            this.btnCSharp.Text = " C#";
-            this.btnCSharp.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCSharp.UseVisualStyleBackColor = false;
-            this.btnCSharp.Click += new System.EventHandler(this.btnCSharp_Click);
-            this.btnCSharp.MouseHover += new System.EventHandler(this.btnCSharp_MouseHover);
             // 
             // panel1
             // 
@@ -226,30 +135,106 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Algoritmo:";
             // 
-            // panel8
+            // txtCodigoPython
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(9)))), ((int)(((byte)(9)))));
-            this.panel8.Controls.Add(this.txtCodigo);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(0, 44);
-            this.panel8.Name = "panel8";
-            this.panel8.Padding = new System.Windows.Forms.Padding(10);
-            this.panel8.Size = new System.Drawing.Size(770, 347);
-            this.panel8.TabIndex = 2;
+            this.txtCodigoPython.Controls.Add(this.tabPageCSharp);
+            this.txtCodigoPython.Controls.Add(this.tabPageJavascript);
+            this.txtCodigoPython.Controls.Add(this.tabPagePython);
+            this.txtCodigoPython.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCodigoPython.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoPython.Location = new System.Drawing.Point(0, 0);
+            this.txtCodigoPython.Name = "txtCodigoPython";
+            this.txtCodigoPython.SelectedIndex = 0;
+            this.txtCodigoPython.Size = new System.Drawing.Size(770, 391);
+            this.txtCodigoPython.TabIndex = 0;
             // 
-            // txtCodigo
+            // tabPageCSharp
             // 
-            this.txtCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(34)))));
-            this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCodigo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtCodigo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.txtCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.txtCodigo.Location = new System.Drawing.Point(10, 10);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.ReadOnly = true;
-            this.txtCodigo.Size = new System.Drawing.Size(750, 327);
-            this.txtCodigo.TabIndex = 0;
-            this.txtCodigo.Text = resources.GetString("txtCodigo.Text");
+            this.tabPageCSharp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.tabPageCSharp.Controls.Add(this.txtCodigoCSharp);
+            this.tabPageCSharp.Location = new System.Drawing.Point(4, 57);
+            this.tabPageCSharp.Name = "tabPageCSharp";
+            this.tabPageCSharp.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageCSharp.Size = new System.Drawing.Size(762, 330);
+            this.tabPageCSharp.TabIndex = 0;
+            this.tabPageCSharp.Text = "C#";
+            // 
+            // tabPageJavascript
+            // 
+            this.tabPageJavascript.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.tabPageJavascript.Controls.Add(this.txtCodigoJavascript);
+            this.tabPageJavascript.Location = new System.Drawing.Point(4, 57);
+            this.tabPageJavascript.Name = "tabPageJavascript";
+            this.tabPageJavascript.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageJavascript.Size = new System.Drawing.Size(762, 330);
+            this.tabPageJavascript.TabIndex = 1;
+            this.tabPageJavascript.Text = "Javascript";
+            // 
+            // tabPagePython
+            // 
+            this.tabPagePython.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.tabPagePython.Controls.Add(this.richTextBox2);
+            this.tabPagePython.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPagePython.Location = new System.Drawing.Point(4, 57);
+            this.tabPagePython.Name = "tabPagePython";
+            this.tabPagePython.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPagePython.Size = new System.Drawing.Size(762, 330);
+            this.tabPagePython.TabIndex = 2;
+            this.tabPagePython.Text = "Python";
+            // 
+            // txtCodigoJavascript
+            // 
+            this.txtCodigoJavascript.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.txtCodigoJavascript.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodigoJavascript.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCodigoJavascript.Location = new System.Drawing.Point(3, 3);
+            this.txtCodigoJavascript.Name = "txtCodigoJavascript";
+            this.txtCodigoJavascript.ReadOnly = true;
+            this.txtCodigoJavascript.Size = new System.Drawing.Size(756, 324);
+            this.txtCodigoJavascript.TabIndex = 0;
+            this.txtCodigoJavascript.Text = "";
+            // 
+            // txtCodigoCSharp
+            // 
+            this.txtCodigoCSharp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.txtCodigoCSharp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodigoCSharp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCodigoCSharp.Location = new System.Drawing.Point(3, 3);
+            this.txtCodigoCSharp.Name = "txtCodigoCSharp";
+            this.txtCodigoCSharp.ReadOnly = true;
+            this.txtCodigoCSharp.Size = new System.Drawing.Size(756, 324);
+            this.txtCodigoCSharp.TabIndex = 1;
+            this.txtCodigoCSharp.Text = "";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox2.Location = new System.Drawing.Point(3, 3);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.ReadOnly = true;
+            this.richTextBox2.Size = new System.Drawing.Size(756, 324);
+            this.richTextBox2.TabIndex = 1;
+            this.richTextBox2.Text = "";
+            // 
+            // btnCopiarCodigo
+            // 
+            this.btnCopiarCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCopiarCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.btnCopiarCodigo.FlatAppearance.BorderSize = 0;
+            this.btnCopiarCodigo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCopiarCodigo.IconChar = FontAwesome.Sharp.IconChar.Clipboard;
+            this.btnCopiarCodigo.IconColor = System.Drawing.Color.Black;
+            this.btnCopiarCodigo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCopiarCodigo.IconSize = 40;
+            this.btnCopiarCodigo.Location = new System.Drawing.Point(744, 95);
+            this.btnCopiarCodigo.Name = "btnCopiarCodigo";
+            this.btnCopiarCodigo.Size = new System.Drawing.Size(40, 40);
+            this.btnCopiarCodigo.TabIndex = 2;
+            this.btnCopiarCodigo.UseVisualStyleBackColor = false;
+            this.btnCopiarCodigo.Click += new System.EventHandler(this.btnCopiarCodigo_Click);
+            this.btnCopiarCodigo.MouseHover += new System.EventHandler(this.btnCopiarCodigo_MouseHover);
             // 
             // frmCodigo
             // 
@@ -265,10 +250,12 @@
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel8.ResumeLayout(false);
+            this.txtCodigoPython.ResumeLayout(false);
+            this.tabPageCSharp.ResumeLayout(false);
+            this.tabPageJavascript.ResumeLayout(false);
+            this.tabPagePython.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -282,13 +269,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private FontAwesome.Sharp.IconButton btnCopiarCodigo;
-        private FontAwesome.Sharp.IconButton btnJS;
-        private FontAwesome.Sharp.IconButton btnPython;
-        private FontAwesome.Sharp.IconButton btnCSharp;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.RichTextBox txtCodigo;
+        private System.Windows.Forms.TabControl txtCodigoPython;
+        private System.Windows.Forms.TabPage tabPageCSharp;
+        private System.Windows.Forms.TabPage tabPageJavascript;
+        private System.Windows.Forms.TabPage tabPagePython;
+        private System.Windows.Forms.RichTextBox txtCodigoJavascript;
+        private System.Windows.Forms.RichTextBox txtCodigoCSharp;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private FontAwesome.Sharp.IconButton btnCopiarCodigo;
     }
 }
