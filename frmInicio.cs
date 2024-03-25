@@ -50,8 +50,9 @@ namespace visualizador_de_algoritmos
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
-
-        //Methods
+        //
+        //Metodos
+        //
         private void BotonActivado(object senderBtn, Color color)
         {
             if (senderBtn != null)
@@ -99,7 +100,6 @@ namespace visualizador_de_algoritmos
             lblTitleChildForm.Text = "Inicio";
             lblTitleChildForm.ForeColor = RGBColors.morado;
         }
-
         private void OpenChildForm(Form childForm)
         {
             //open only form
@@ -176,7 +176,6 @@ namespace visualizador_de_algoritmos
         {
             WindowState = FormWindowState.Minimized;
         }
-
         #endregion
 
         #region Arrastrar Form
@@ -190,9 +189,33 @@ namespace visualizador_de_algoritmos
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
         #endregion
 
+        #region Hover
+        private void btnCerrar_MouseHover(object sender, EventArgs e)
+        {
+            IconPictureBox pictureBox = (IconPictureBox) sender;
+            toolTip1.SetToolTip(pictureBox, "Cerrar");
+        }
+
+        private void btnMaximizar_MouseHover(object sender, EventArgs e)
+        {
+            IconPictureBox pictureBox = (IconPictureBox)sender;
+            toolTip1.SetToolTip(pictureBox, "Maximizar");
+        }
+
+        private void btnMinimizar_MouseHover(object sender, EventArgs e)
+        {
+            IconPictureBox pictureBox = (IconPictureBox)sender;
+            toolTip1.SetToolTip(pictureBox, "Minimizar");
+        }
+
+        private void pbInicio_MouseHover(object sender, EventArgs e)
+        {
+            PictureBox pictureBox = (PictureBox)sender;
+            toolTip1.SetToolTip(pictureBox, "Inicio");
+        }        
+        #endregion
 
     }
 }
