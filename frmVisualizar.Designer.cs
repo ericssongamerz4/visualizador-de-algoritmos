@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -36,22 +37,29 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblVelocidad = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbVelocidad = new System.Windows.Forms.TrackBar();
             this.btnBarajear = new FontAwesome.Sharp.IconButton();
-            this.btnInicio = new FontAwesome.Sharp.IconButton();
+            this.btnFinal = new FontAwesome.Sharp.IconButton();
             this.btnReproducir = new FontAwesome.Sharp.IconButton();
             this.btnReiniciar = new FontAwesome.Sharp.IconButton();
-            this.btnFinal = new FontAwesome.Sharp.IconButton();
-            this.materialSlider3 = new MaterialSkin.Controls.MaterialSlider();
+            this.btnInicio = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.materialSlider2 = new MaterialSkin.Controls.MaterialSlider();
+            this.lblElementos = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbElementos = new System.Windows.Forms.TrackBar();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panelContenido.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbVelocidad)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbElementos)).BeginInit();
             this.SuspendLayout();
             // 
             // panelContenido
@@ -110,17 +118,54 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.panel4.Controls.Add(this.lblVelocidad);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.tbVelocidad);
             this.panel4.Controls.Add(this.btnBarajear);
-            this.panel4.Controls.Add(this.btnInicio);
+            this.panel4.Controls.Add(this.btnFinal);
             this.panel4.Controls.Add(this.btnReproducir);
             this.panel4.Controls.Add(this.btnReiniciar);
-            this.panel4.Controls.Add(this.btnFinal);
-            this.panel4.Controls.Add(this.materialSlider3);
+            this.panel4.Controls.Add(this.btnInicio);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 10);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(770, 82);
             this.panel4.TabIndex = 0;
+            // 
+            // lblVelocidad
+            // 
+            this.lblVelocidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVelocidad.AutoSize = true;
+            this.lblVelocidad.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVelocidad.Location = new System.Drawing.Point(322, 25);
+            this.lblVelocidad.Name = "lblVelocidad";
+            this.lblVelocidad.Size = new System.Drawing.Size(32, 28);
+            this.lblVelocidad.TabIndex = 10;
+            this.lblVelocidad.Text = "1x";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(109, 28);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Velocidad:";
+            // 
+            // tbVelocidad
+            // 
+            this.tbVelocidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbVelocidad.Location = new System.Drawing.Point(114, 24);
+            this.tbVelocidad.Maximum = 7;
+            this.tbVelocidad.Name = "tbVelocidad";
+            this.tbVelocidad.Size = new System.Drawing.Size(202, 69);
+            this.tbVelocidad.TabIndex = 7;
+            this.tbVelocidad.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.tbVelocidad.Value = 1;
+            this.tbVelocidad.Scroll += new System.EventHandler(this.tbVelocidad_Scroll);
             // 
             // btnBarajear
             // 
@@ -136,21 +181,25 @@
             this.btnBarajear.Size = new System.Drawing.Size(60, 60);
             this.btnBarajear.TabIndex = 6;
             this.btnBarajear.UseVisualStyleBackColor = false;
+            this.btnBarajear.Click += new System.EventHandler(this.btnBarajear_Click);
+            this.btnBarajear.MouseHover += new System.EventHandler(this.btnBarajear_MouseHover);
             // 
-            // btnInicio
+            // btnFinal
             // 
-            this.btnInicio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
-            this.btnInicio.FlatAppearance.BorderSize = 0;
-            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInicio.IconChar = FontAwesome.Sharp.IconChar.ForwardStep;
-            this.btnInicio.IconColor = System.Drawing.Color.Black;
-            this.btnInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnInicio.Location = new System.Drawing.Point(620, 12);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(60, 60);
-            this.btnInicio.TabIndex = 5;
-            this.btnInicio.UseVisualStyleBackColor = false;
+            this.btnFinal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFinal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
+            this.btnFinal.FlatAppearance.BorderSize = 0;
+            this.btnFinal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinal.IconChar = FontAwesome.Sharp.IconChar.ForwardStep;
+            this.btnFinal.IconColor = System.Drawing.Color.Black;
+            this.btnFinal.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFinal.Location = new System.Drawing.Point(620, 12);
+            this.btnFinal.Name = "btnFinal";
+            this.btnFinal.Size = new System.Drawing.Size(60, 60);
+            this.btnFinal.TabIndex = 5;
+            this.btnFinal.UseVisualStyleBackColor = false;
+            this.btnFinal.Click += new System.EventHandler(this.btnFinal_Click);
+            this.btnFinal.MouseHover += new System.EventHandler(this.btnFinal_MouseHover);
             // 
             // btnReproducir
             // 
@@ -158,7 +207,7 @@
             this.btnReproducir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
             this.btnReproducir.FlatAppearance.BorderSize = 0;
             this.btnReproducir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReproducir.IconChar = FontAwesome.Sharp.IconChar.Pause;
+            this.btnReproducir.IconChar = FontAwesome.Sharp.IconChar.Play;
             this.btnReproducir.IconColor = System.Drawing.Color.Black;
             this.btnReproducir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnReproducir.Location = new System.Drawing.Point(545, 11);
@@ -166,6 +215,8 @@
             this.btnReproducir.Size = new System.Drawing.Size(60, 60);
             this.btnReproducir.TabIndex = 4;
             this.btnReproducir.UseVisualStyleBackColor = false;
+            this.btnReproducir.Click += new System.EventHandler(this.btnReproducir_Click);
+            this.btnReproducir.MouseHover += new System.EventHandler(this.btnReproducir_MouseHover);
             // 
             // btnReiniciar
             // 
@@ -181,45 +232,34 @@
             this.btnReiniciar.Size = new System.Drawing.Size(60, 60);
             this.btnReiniciar.TabIndex = 3;
             this.btnReiniciar.UseVisualStyleBackColor = false;
+            this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
+            this.btnReiniciar.MouseHover += new System.EventHandler(this.btnReiniciar_MouseHover);
             // 
-            // btnFinal
+            // btnInicio
             // 
-            this.btnFinal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFinal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
-            this.btnFinal.FlatAppearance.BorderSize = 0;
-            this.btnFinal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinal.IconChar = FontAwesome.Sharp.IconChar.BackwardStep;
-            this.btnFinal.IconColor = System.Drawing.Color.Black;
-            this.btnFinal.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFinal.Location = new System.Drawing.Point(468, 11);
-            this.btnFinal.Name = "btnFinal";
-            this.btnFinal.Size = new System.Drawing.Size(60, 60);
-            this.btnFinal.TabIndex = 2;
-            this.btnFinal.UseVisualStyleBackColor = false;
-            // 
-            // materialSlider3
-            // 
-            this.materialSlider3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialSlider3.Depth = 0;
-            this.materialSlider3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialSlider3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialSlider3.Location = new System.Drawing.Point(17, 21);
-            this.materialSlider3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSlider3.Name = "materialSlider3";
-            this.materialSlider3.RangeMax = 7;
-            this.materialSlider3.RangeMin = 1;
-            this.materialSlider3.Size = new System.Drawing.Size(256, 40);
-            this.materialSlider3.TabIndex = 1;
-            this.materialSlider3.Text = "Velocidad:";
-            this.materialSlider3.Value = 1;
+            this.btnInicio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
+            this.btnInicio.FlatAppearance.BorderSize = 0;
+            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInicio.IconChar = FontAwesome.Sharp.IconChar.BackwardStep;
+            this.btnInicio.IconColor = System.Drawing.Color.Black;
+            this.btnInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnInicio.Location = new System.Drawing.Point(468, 11);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(60, 60);
+            this.btnInicio.TabIndex = 2;
+            this.btnInicio.UseVisualStyleBackColor = false;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
+            this.btnInicio.MouseHover += new System.EventHandler(this.btnInicio_MouseHover);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.panel1.Controls.Add(this.lblElementos);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.tbElementos);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.materialSlider2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(15, 15);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
@@ -227,22 +267,40 @@
             this.panel1.Size = new System.Drawing.Size(770, 64);
             this.panel1.TabIndex = 2;
             // 
-            // materialSlider2
+            // lblElementos
             // 
-            this.materialSlider2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblElementos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblElementos.AutoSize = true;
+            this.lblElementos.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblElementos.Location = new System.Drawing.Point(365, 13);
+            this.lblElementos.Name = "lblElementos";
+            this.lblElementos.Size = new System.Drawing.Size(34, 28);
+            this.lblElementos.TabIndex = 13;
+            this.lblElementos.Text = "10";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(115, 28);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Elementos:";
+            // 
+            // tbElementos
+            // 
+            this.tbElementos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialSlider2.Depth = 0;
-            this.materialSlider2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialSlider2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialSlider2.Location = new System.Drawing.Point(17, 12);
-            this.materialSlider2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSlider2.Name = "materialSlider2";
-            this.materialSlider2.RangeMax = 1000;
-            this.materialSlider2.RangeMin = 10;
-            this.materialSlider2.Size = new System.Drawing.Size(368, 40);
-            this.materialSlider2.TabIndex = 1;
-            this.materialSlider2.Text = "Número de elementos:";
-            this.materialSlider2.Value = 100;
+            this.tbElementos.Location = new System.Drawing.Point(114, 16);
+            this.tbElementos.Maximum = 100;
+            this.tbElementos.Minimum = 10;
+            this.tbElementos.Name = "tbElementos";
+            this.tbElementos.Size = new System.Drawing.Size(245, 69);
+            this.tbElementos.TabIndex = 11;
+            this.tbElementos.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.tbElementos.Value = 10;
+            this.tbElementos.Scroll += new System.EventHandler(this.tbElementos_Scroll);
             // 
             // comboBox1
             // 
@@ -285,8 +343,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbVelocidad)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbElementos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -297,15 +358,20 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Panel panel2;
-        private MaterialSkin.Controls.MaterialSlider materialSlider3;
-        private System.Windows.Forms.Panel panel4;
-        private FontAwesome.Sharp.IconButton btnInicio;
-        private FontAwesome.Sharp.IconButton btnReproducir;
-        private FontAwesome.Sharp.IconButton btnReiniciar;
-        private FontAwesome.Sharp.IconButton btnFinal;
-        private FontAwesome.Sharp.IconButton btnBarajear;
-        private MaterialSkin.Controls.MaterialSlider materialSlider2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TrackBar tbVelocidad;
+        private FontAwesome.Sharp.IconButton btnBarajear;
+        private FontAwesome.Sharp.IconButton btnFinal;
+        private FontAwesome.Sharp.IconButton btnReproducir;
+        private FontAwesome.Sharp.IconButton btnReiniciar;
+        private FontAwesome.Sharp.IconButton btnInicio;
+        private System.Windows.Forms.Label lblVelocidad;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblElementos;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TrackBar tbElementos;
     }
 }
