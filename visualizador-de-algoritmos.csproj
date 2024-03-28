@@ -74,6 +74,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="algoritmos.s3db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Compile Include="frmAjustes.cs">
       <SubType>Form</SubType>
     </Compile>
