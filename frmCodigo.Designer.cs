@@ -34,13 +34,13 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txtCodigoPython = new System.Windows.Forms.TabControl();
+            this.tbLenguajesDeProgramacion = new System.Windows.Forms.TabControl();
             this.tabPageCSharp = new System.Windows.Forms.TabPage();
             this.txtCodigoCSharp = new System.Windows.Forms.RichTextBox();
             this.tabPageJavascript = new System.Windows.Forms.TabPage();
             this.txtCodigoJavascript = new System.Windows.Forms.RichTextBox();
             this.tabPagePython = new System.Windows.Forms.TabPage();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.txtCodigoPython = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbAlgoritmo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,7 +49,7 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.txtCodigoPython.SuspendLayout();
+            this.tbLenguajesDeProgramacion.SuspendLayout();
             this.tabPageCSharp.SuspendLayout();
             this.tabPageJavascript.SuspendLayout();
             this.tabPagePython.SuspendLayout();
@@ -111,25 +111,25 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.panel4.Controls.Add(this.txtCodigoPython);
+            this.panel4.Controls.Add(this.tbLenguajesDeProgramacion);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 10);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(770, 391);
             this.panel4.TabIndex = 0;
             // 
-            // txtCodigoPython
+            // tbLenguajesDeProgramacion
             // 
-            this.txtCodigoPython.Controls.Add(this.tabPageCSharp);
-            this.txtCodigoPython.Controls.Add(this.tabPageJavascript);
-            this.txtCodigoPython.Controls.Add(this.tabPagePython);
-            this.txtCodigoPython.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtCodigoPython.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoPython.Location = new System.Drawing.Point(0, 0);
-            this.txtCodigoPython.Name = "txtCodigoPython";
-            this.txtCodigoPython.SelectedIndex = 0;
-            this.txtCodigoPython.Size = new System.Drawing.Size(770, 391);
-            this.txtCodigoPython.TabIndex = 0;
+            this.tbLenguajesDeProgramacion.Controls.Add(this.tabPageCSharp);
+            this.tbLenguajesDeProgramacion.Controls.Add(this.tabPageJavascript);
+            this.tbLenguajesDeProgramacion.Controls.Add(this.tabPagePython);
+            this.tbLenguajesDeProgramacion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbLenguajesDeProgramacion.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLenguajesDeProgramacion.Location = new System.Drawing.Point(0, 0);
+            this.tbLenguajesDeProgramacion.Name = "tbLenguajesDeProgramacion";
+            this.tbLenguajesDeProgramacion.SelectedIndex = 0;
+            this.tbLenguajesDeProgramacion.Size = new System.Drawing.Size(770, 391);
+            this.tbLenguajesDeProgramacion.TabIndex = 0;
             // 
             // tabPageCSharp
             // 
@@ -180,7 +180,7 @@
             // tabPagePython
             // 
             this.tabPagePython.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.tabPagePython.Controls.Add(this.richTextBox2);
+            this.tabPagePython.Controls.Add(this.txtCodigoPython);
             this.tabPagePython.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPagePython.Location = new System.Drawing.Point(4, 57);
             this.tabPagePython.Name = "tabPagePython";
@@ -189,17 +189,17 @@
             this.tabPagePython.TabIndex = 2;
             this.tabPagePython.Text = "Python";
             // 
-            // richTextBox2
+            // txtCodigoPython
             // 
-            this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox2.Location = new System.Drawing.Point(3, 3);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(756, 324);
-            this.richTextBox2.TabIndex = 1;
-            this.richTextBox2.Text = "";
+            this.txtCodigoPython.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.txtCodigoPython.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodigoPython.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCodigoPython.Location = new System.Drawing.Point(3, 3);
+            this.txtCodigoPython.Name = "txtCodigoPython";
+            this.txtCodigoPython.ReadOnly = true;
+            this.txtCodigoPython.Size = new System.Drawing.Size(756, 324);
+            this.txtCodigoPython.TabIndex = 1;
+            this.txtCodigoPython.Text = "";
             // 
             // panel1
             // 
@@ -225,6 +225,7 @@
             this.cmbAlgoritmo.Name = "cmbAlgoritmo";
             this.cmbAlgoritmo.Size = new System.Drawing.Size(566, 46);
             this.cmbAlgoritmo.TabIndex = 5;
+            this.cmbAlgoritmo.SelectedIndexChanged += new System.EventHandler(this.cmbAlgoritmo_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -250,7 +251,7 @@
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.txtCodigoPython.ResumeLayout(false);
+            this.tbLenguajesDeProgramacion.ResumeLayout(false);
             this.tabPageCSharp.ResumeLayout(false);
             this.tabPageJavascript.ResumeLayout(false);
             this.tabPagePython.ResumeLayout(false);
@@ -270,13 +271,13 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.TabControl txtCodigoPython;
+        private System.Windows.Forms.TabControl tbLenguajesDeProgramacion;
         private System.Windows.Forms.TabPage tabPageCSharp;
         private System.Windows.Forms.TabPage tabPageJavascript;
         private System.Windows.Forms.TabPage tabPagePython;
         private System.Windows.Forms.RichTextBox txtCodigoJavascript;
         private System.Windows.Forms.RichTextBox txtCodigoCSharp;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox txtCodigoPython;
         private FontAwesome.Sharp.IconButton btnCopiarCodigo;
     }
 }
