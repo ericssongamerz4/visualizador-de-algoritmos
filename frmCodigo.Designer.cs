@@ -45,6 +45,7 @@
             this.cmbAlgoritmo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelContenido.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -71,6 +72,7 @@
             // 
             this.btnCopiarCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCopiarCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.btnCopiarCodigo.Enabled = false;
             this.btnCopiarCodigo.FlatAppearance.BorderSize = 0;
             this.btnCopiarCodigo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCopiarCodigo.IconChar = FontAwesome.Sharp.IconChar.Clipboard;
@@ -81,9 +83,9 @@
             this.btnCopiarCodigo.Name = "btnCopiarCodigo";
             this.btnCopiarCodigo.Size = new System.Drawing.Size(40, 40);
             this.btnCopiarCodigo.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.btnCopiarCodigo, "Copiar código");
             this.btnCopiarCodigo.UseVisualStyleBackColor = false;
-            this.btnCopiarCodigo.Click += new System.EventHandler(this.btnCopiarCodigo_Click);
-            this.btnCopiarCodigo.MouseHover += new System.EventHandler(this.btnCopiarCodigo_MouseHover);
+            this.btnCopiarCodigo.Click += new System.EventHandler(this.BtnCopiarCodigo_Click);
             // 
             // panel3
             // 
@@ -144,9 +146,11 @@
             // 
             // txtCodigoCSharp
             // 
-            this.txtCodigoCSharp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.txtCodigoCSharp.BackColor = System.Drawing.Color.Black;
             this.txtCodigoCSharp.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigoCSharp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCodigoCSharp.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtCodigoCSharp.ForeColor = System.Drawing.Color.Cyan;
             this.txtCodigoCSharp.Location = new System.Drawing.Point(3, 3);
             this.txtCodigoCSharp.Name = "txtCodigoCSharp";
             this.txtCodigoCSharp.ReadOnly = true;
@@ -167,9 +171,11 @@
             // 
             // txtCodigoJavascript
             // 
-            this.txtCodigoJavascript.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.txtCodigoJavascript.BackColor = System.Drawing.Color.Black;
             this.txtCodigoJavascript.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigoJavascript.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCodigoJavascript.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoJavascript.ForeColor = System.Drawing.Color.Lime;
             this.txtCodigoJavascript.Location = new System.Drawing.Point(3, 3);
             this.txtCodigoJavascript.Name = "txtCodigoJavascript";
             this.txtCodigoJavascript.ReadOnly = true;
@@ -191,9 +197,11 @@
             // 
             // txtCodigoPython
             // 
-            this.txtCodigoPython.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.txtCodigoPython.BackColor = System.Drawing.Color.Black;
             this.txtCodigoPython.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigoPython.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCodigoPython.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoPython.ForeColor = System.Drawing.Color.Yellow;
             this.txtCodigoPython.Location = new System.Drawing.Point(3, 3);
             this.txtCodigoPython.Name = "txtCodigoPython";
             this.txtCodigoPython.ReadOnly = true;
@@ -225,7 +233,7 @@
             this.cmbAlgoritmo.Name = "cmbAlgoritmo";
             this.cmbAlgoritmo.Size = new System.Drawing.Size(566, 46);
             this.cmbAlgoritmo.TabIndex = 5;
-            this.cmbAlgoritmo.SelectedIndexChanged += new System.EventHandler(this.cmbAlgoritmo_SelectedIndexChanged);
+            this.cmbAlgoritmo.SelectedIndexChanged += new System.EventHandler(this.CmbAlgoritmo_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -236,6 +244,10 @@
             this.label1.Size = new System.Drawing.Size(192, 45);
             this.label1.TabIndex = 8;
             this.label1.Text = "Algoritmo:";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // frmCodigo
             // 
@@ -279,5 +291,6 @@
         private System.Windows.Forms.RichTextBox txtCodigoCSharp;
         private System.Windows.Forms.RichTextBox txtCodigoPython;
         private FontAwesome.Sharp.IconButton btnCopiarCodigo;
+        private System.Windows.Forms.Timer timer1;
     }
 }

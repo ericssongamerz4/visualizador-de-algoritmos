@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 
@@ -14,8 +7,7 @@ namespace visualizador_de_algoritmos
     public partial class frmCodigo : Form
     {
         //Se crea la cadena de conexion a la base de datos
-        string cadenaConexion = @"URI=file:" + Application.StartupPath + "\\algoritmos.s3db";
-        bool isCodigoCopiado = true;
+        readonly string cadenaConexion = @"URI=file:" + Application.StartupPath + "\\algoritmos.s3db";
 
         public frmCodigo()
         {
@@ -23,6 +15,9 @@ namespace visualizador_de_algoritmos
             MostrarAlgoritmosDisponibles();
         }
 
+        //
+        //Metodos
+        //
         private void MostrarAlgoritmosDisponibles()
         {
             cmbAlgoritmo.Items.Clear();//Limpiar elementos del combobox
@@ -49,8 +44,6 @@ namespace visualizador_de_algoritmos
             }
             catch (Exception v) { MessageBox.Show("Error: " + v, "Aviso", MessageBoxButtons.OK); Close(); }
         }
-
-
         private void MostrarCodigo()
         {
             try
@@ -81,59 +74,40 @@ namespace visualizador_de_algoritmos
             catch (Exception v) { MessageBox.Show("Error: " + v, "Aviso", MessageBoxButtons.OK); Close(); }
         }
 
-
-
-
-
         //
         //Eventos
         //
-        #region Click
-        private void btnCopiarCodigo_Click(object sender, EventArgs e)
-        {
-            Button button = (Button)sender;
-         
-            if (isCodigoCopiado)
-            {                
-                btnCopiarCodigo.IconChar = FontAwesome.Sharp.IconChar.ClipboardCheck;
-                isCodigoCopiado=false;
-         
-                Clipboard.SetText(txtCodigoJavascript.Text + " ");                
-                toolTip1.SetToolTip(button, "Código copiado");
+        #region Eventos
+        private void BtnCopiarCodigo_Click(object sender, EventArgs e)
+        {            
+            //Copiar codigo a portapapeles
+            Clipboard.SetText(txtCodigoJavascript.Text + " ");                
 
-            }
-            else
-            {
-                btnCopiarCodigo.IconChar = FontAwesome.Sharp.IconChar.Clipboard;
-                isCodigoCopiado=true;
-                toolTip1.SetToolTip(button, "Copiar código");
-            }
+            //Actualizar el icono y tooltip
+            btnCopiarCodigo.IconChar = FontAwesome.Sharp.IconChar.ClipboardCheck;
+            toolTip1.SetToolTip(btnCopiarCodigo, "Código copiado");
+
+            //Empezar el temporizador para reiniciar el icono del boton y el tooltip
+            timer1.Interval = 3000;            
+            timer1.Start();         
         }
-        #endregion
-
-        #region Hover
-        private void btnCopiarCodigo_MouseHover(object sender, EventArgs e)
-        {
-            Button button = (Button)sender;
-            if (isCodigoCopiado)
-            {
-                toolTip1.SetToolTip(button, "Copiar código");
-            }
-            else
-            {
-                toolTip1.SetToolTip(button, "Código copiado");
-            }
-        }
-
-
-        #endregion
-
-        private void cmbAlgoritmo_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbAlgoritmo_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(cmbAlgoritmo.Text != null)
             {
+                btnCopiarCodigo.Enabled = true;
                 MostrarCodigo();
             }
         }
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            //Reiniciar el boton y el tooltip a su estado original
+            btnCopiarCodigo.IconChar = FontAwesome.Sharp.IconChar.Clipboard;
+            toolTip1.SetToolTip(btnCopiarCodigo, "Copiar código");
+            
+            //Detener el temporizador
+            timer1.Stop();
+        }
+        #endregion
     }
 }
