@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using System.Windows.Controls.Primitives;
+using System.Windows.Controls;
 
 namespace visualizador_de_algoritmos
 {
@@ -73,15 +75,31 @@ namespace visualizador_de_algoritmos
             }
             catch (Exception v) { MessageBox.Show("Error: " + v, "Aviso", MessageBoxButtons.OK); Close(); }
         }
+        // Copia el codigo dependiendo del lenguaje de programacion elegido
+        private void CopiarCodigo()
+        {
+            if (tbLenguajesDeProgramacion.SelectedTab == tabPageCSharp)
+            {
+                Clipboard.SetText(txtCodigoCSharp.Text + " ");
+            }
+            else if (tbLenguajesDeProgramacion.SelectedTab == tabPagePython)
+            {
+                Clipboard.SetText(txtCodigoPython.Text + " ");
+            }
+            else if (tbLenguajesDeProgramacion.SelectedTab == tabPageJavascript)
+            {
+                Clipboard.SetText(txtCodigoJavascript.Text + " ");
+            }
+        }
 
         //
         //Eventos
         //
         #region Eventos
         private void BtnCopiarCodigo_Click(object sender, EventArgs e)
-        {            
+        {
             //Copiar codigo a portapapeles
-            Clipboard.SetText(txtCodigoJavascript.Text + " ");                
+            CopiarCodigo();               
 
             //Actualizar el icono y tooltip
             btnCopiarCodigo.IconChar = FontAwesome.Sharp.IconChar.ClipboardCheck;
