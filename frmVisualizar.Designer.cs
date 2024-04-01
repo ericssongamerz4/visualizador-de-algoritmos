@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelContenido = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblVelocidad = new System.Windows.Forms.Label();
@@ -48,18 +47,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblElementos = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.tbElementos = new System.Windows.Forms.TrackBar();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tbNumeroDeElementos = new System.Windows.Forms.TrackBar();
+            this.cmbAlgoritmo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.panelContenido.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbVelocidad)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbElementos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbNumeroDeElementos)).BeginInit();
             this.SuspendLayout();
             // 
             // panelContenido
@@ -75,7 +75,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.chart1);
+            this.panel3.Controls.Add(this.chart);
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(15, 79);
@@ -84,26 +84,28 @@
             this.panel3.Size = new System.Drawing.Size(770, 406);
             this.panel3.TabIndex = 5;
             // 
-            // chart1
+            // chart
             // 
-            this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.chart1.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(0, 10);
-            this.chart1.Name = "chart1";
-            this.chart1.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.chart1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(770, 304);
-            this.chart1.TabIndex = 2;
-            this.chart1.Text = "chart1";
+            this.chart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.chart.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.chart.BorderSkin.PageColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            chartArea3.Name = "ChartArea1";
+            this.chart.ChartAreas.Add(chartArea3);
+            this.chart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chart.Location = new System.Drawing.Point(0, 10);
+            this.chart.Name = "chart";
+            this.chart.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chart.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))))};
+            this.chart.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            series3.ChartArea = "ChartArea1";
+            series3.Name = "Series1";
+            this.chart.Series.Add(series3);
+            this.chart.Size = new System.Drawing.Size(770, 304);
+            this.chart.TabIndex = 2;
+            this.chart.Text = "chart1";
             // 
             // panel2
             // 
@@ -136,10 +138,10 @@
             // 
             this.lblVelocidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVelocidad.AutoSize = true;
-            this.lblVelocidad.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVelocidad.Location = new System.Drawing.Point(322, 25);
+            this.lblVelocidad.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.lblVelocidad.Location = new System.Drawing.Point(322, 17);
             this.lblVelocidad.Name = "lblVelocidad";
-            this.lblVelocidad.Size = new System.Drawing.Size(32, 28);
+            this.lblVelocidad.Size = new System.Drawing.Size(45, 38);
             this.lblVelocidad.TabIndex = 10;
             this.lblVelocidad.Text = "1x";
             // 
@@ -147,10 +149,10 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 23);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 14F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(3, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 28);
+            this.label2.Size = new System.Drawing.Size(164, 38);
             this.label2.TabIndex = 8;
             this.label2.Text = "Velocidad:";
             // 
@@ -158,19 +160,20 @@
             // 
             this.tbVelocidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbVelocidad.Location = new System.Drawing.Point(114, 24);
-            this.tbVelocidad.Maximum = 7;
+            this.tbVelocidad.Location = new System.Drawing.Point(168, 24);
+            this.tbVelocidad.Maximum = 5;
             this.tbVelocidad.Name = "tbVelocidad";
-            this.tbVelocidad.Size = new System.Drawing.Size(202, 69);
-            this.tbVelocidad.TabIndex = 7;
+            this.tbVelocidad.Size = new System.Drawing.Size(148, 69);
+            this.tbVelocidad.TabIndex = 5;
             this.tbVelocidad.TickStyle = System.Windows.Forms.TickStyle.None;
             this.tbVelocidad.Value = 1;
-            this.tbVelocidad.Scroll += new System.EventHandler(this.tbVelocidad_Scroll);
+            this.tbVelocidad.Scroll += new System.EventHandler(this.TbVelocidad_Scroll);
             // 
             // btnBarajear
             // 
             this.btnBarajear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBarajear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
+            this.btnBarajear.Enabled = false;
             this.btnBarajear.FlatAppearance.BorderSize = 0;
             this.btnBarajear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBarajear.IconChar = FontAwesome.Sharp.IconChar.Random;
@@ -180,14 +183,15 @@
             this.btnBarajear.Name = "btnBarajear";
             this.btnBarajear.Size = new System.Drawing.Size(60, 60);
             this.btnBarajear.TabIndex = 6;
+            this.toolTip.SetToolTip(this.btnBarajear, "Barajear");
             this.btnBarajear.UseVisualStyleBackColor = false;
-            this.btnBarajear.Click += new System.EventHandler(this.btnBarajear_Click);
-            this.btnBarajear.MouseHover += new System.EventHandler(this.btnBarajear_MouseHover);
+            this.btnBarajear.Click += new System.EventHandler(this.BtnBarajear_Click);
             // 
             // btnFinal
             // 
             this.btnFinal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFinal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
+            this.btnFinal.Enabled = false;
             this.btnFinal.FlatAppearance.BorderSize = 0;
             this.btnFinal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinal.IconChar = FontAwesome.Sharp.IconChar.ForwardStep;
@@ -197,14 +201,15 @@
             this.btnFinal.Name = "btnFinal";
             this.btnFinal.Size = new System.Drawing.Size(60, 60);
             this.btnFinal.TabIndex = 5;
+            this.toolTip.SetToolTip(this.btnFinal, "Ir al Final");
             this.btnFinal.UseVisualStyleBackColor = false;
-            this.btnFinal.Click += new System.EventHandler(this.btnFinal_Click);
-            this.btnFinal.MouseHover += new System.EventHandler(this.btnFinal_MouseHover);
+            this.btnFinal.Click += new System.EventHandler(this.BtnFinal_Click);
             // 
             // btnReproducir
             // 
             this.btnReproducir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReproducir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
+            this.btnReproducir.Enabled = false;
             this.btnReproducir.FlatAppearance.BorderSize = 0;
             this.btnReproducir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReproducir.IconChar = FontAwesome.Sharp.IconChar.Play;
@@ -214,14 +219,16 @@
             this.btnReproducir.Name = "btnReproducir";
             this.btnReproducir.Size = new System.Drawing.Size(60, 60);
             this.btnReproducir.TabIndex = 4;
+            this.toolTip.SetToolTip(this.btnReproducir, "Reproducir");
             this.btnReproducir.UseVisualStyleBackColor = false;
-            this.btnReproducir.Click += new System.EventHandler(this.btnReproducir_Click);
-            this.btnReproducir.MouseHover += new System.EventHandler(this.btnReproducir_MouseHover);
+            this.btnReproducir.Click += new System.EventHandler(this.BtnReproducir_Click);
+            this.btnReproducir.MouseHover += new System.EventHandler(this.BtnReproducir_MouseHover);
             // 
             // btnReiniciar
             // 
             this.btnReiniciar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReiniciar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
+            this.btnReiniciar.Enabled = false;
             this.btnReiniciar.FlatAppearance.BorderSize = 0;
             this.btnReiniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReiniciar.IconChar = FontAwesome.Sharp.IconChar.Rotate;
@@ -231,14 +238,15 @@
             this.btnReiniciar.Name = "btnReiniciar";
             this.btnReiniciar.Size = new System.Drawing.Size(60, 60);
             this.btnReiniciar.TabIndex = 3;
+            this.toolTip.SetToolTip(this.btnReiniciar, "Reiniciar");
             this.btnReiniciar.UseVisualStyleBackColor = false;
-            this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
-            this.btnReiniciar.MouseHover += new System.EventHandler(this.btnReiniciar_MouseHover);
+            this.btnReiniciar.Click += new System.EventHandler(this.BtnReiniciar_Click);
             // 
             // btnInicio
             // 
             this.btnInicio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
+            this.btnInicio.Enabled = false;
             this.btnInicio.FlatAppearance.BorderSize = 0;
             this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInicio.IconChar = FontAwesome.Sharp.IconChar.BackwardStep;
@@ -248,17 +256,17 @@
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(60, 60);
             this.btnInicio.TabIndex = 2;
+            this.toolTip.SetToolTip(this.btnInicio, "Volver al inicio");
             this.btnInicio.UseVisualStyleBackColor = false;
-            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
-            this.btnInicio.MouseHover += new System.EventHandler(this.btnInicio_MouseHover);
+            this.btnInicio.Click += new System.EventHandler(this.BtnInicio_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.panel1.Controls.Add(this.lblElementos);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.tbElementos);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.tbNumeroDeElementos);
+            this.panel1.Controls.Add(this.cmbAlgoritmo);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(15, 15);
@@ -272,7 +280,7 @@
             this.lblElementos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblElementos.AutoSize = true;
             this.lblElementos.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblElementos.Location = new System.Drawing.Point(365, 13);
+            this.lblElementos.Location = new System.Drawing.Point(343, 21);
             this.lblElementos.Name = "lblElementos";
             this.lblElementos.Size = new System.Drawing.Size(34, 28);
             this.lblElementos.TabIndex = 13;
@@ -281,52 +289,59 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 13);
+            this.label4.Font = new System.Drawing.Font("Segoe UI Black", 14F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(3, 13);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 28);
+            this.label4.Size = new System.Drawing.Size(171, 38);
             this.label4.TabIndex = 12;
             this.label4.Text = "Elementos:";
             // 
-            // tbElementos
+            // tbNumeroDeElementos
             // 
-            this.tbElementos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tbNumeroDeElementos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbElementos.Location = new System.Drawing.Point(114, 16);
-            this.tbElementos.Maximum = 100;
-            this.tbElementos.Minimum = 10;
-            this.tbElementos.Name = "tbElementos";
-            this.tbElementos.Size = new System.Drawing.Size(245, 69);
-            this.tbElementos.TabIndex = 11;
-            this.tbElementos.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.tbElementos.Value = 10;
-            this.tbElementos.Scroll += new System.EventHandler(this.tbElementos_Scroll);
+            this.tbNumeroDeElementos.Location = new System.Drawing.Point(168, 20);
+            this.tbNumeroDeElementos.Maximum = 100;
+            this.tbNumeroDeElementos.Minimum = 10;
+            this.tbNumeroDeElementos.Name = "tbNumeroDeElementos";
+            this.tbNumeroDeElementos.Size = new System.Drawing.Size(173, 69);
+            this.tbNumeroDeElementos.TabIndex = 11;
+            this.tbNumeroDeElementos.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.toolTip.SetToolTip(this.tbNumeroDeElementos, "Numero de Elementos");
+            this.tbNumeroDeElementos.Value = 10;
+            this.tbNumeroDeElementos.Scroll += new System.EventHandler(this.TbNumeroDeElementos_Scroll);
             // 
-            // comboBox1
+            // cmbAlgoritmo
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbAlgoritmo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbAlgoritmo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.cmbAlgoritmo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbAlgoritmo.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cmbAlgoritmo.FormattingEnabled = true;
+            this.cmbAlgoritmo.Items.AddRange(new object[] {
             "Bubble sort",
             "Selecion sort"});
-            this.comboBox1.Location = new System.Drawing.Point(545, 13);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(209, 38);
-            this.comboBox1.TabIndex = 2;
+            this.cmbAlgoritmo.Location = new System.Drawing.Point(561, 18);
+            this.cmbAlgoritmo.Name = "cmbAlgoritmo";
+            this.cmbAlgoritmo.Size = new System.Drawing.Size(193, 40);
+            this.cmbAlgoritmo.TabIndex = 2;
+            this.cmbAlgoritmo.SelectedIndexChanged += new System.EventHandler(this.cmbAlgoritmo_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(426, 16);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(387, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 28);
+            this.label1.Size = new System.Drawing.Size(170, 38);
             this.label1.TabIndex = 3;
             this.label1.Text = "Algoritmo:";
+            // 
+            // timer
+            // 
+            this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // frmVisualizar
             // 
@@ -340,14 +355,14 @@
             this.Text = "Visualizar";
             this.panelContenido.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbVelocidad)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbElementos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbNumeroDeElementos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -356,11 +371,11 @@
         private System.Windows.Forms.Panel panelContenido;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ComboBox cmbAlgoritmo;
+        private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TrackBar tbVelocidad;
         private FontAwesome.Sharp.IconButton btnBarajear;
@@ -372,6 +387,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblElementos;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TrackBar tbElementos;
+        private System.Windows.Forms.TrackBar tbNumeroDeElementos;
+        private System.Windows.Forms.Timer timer;
     }
 }

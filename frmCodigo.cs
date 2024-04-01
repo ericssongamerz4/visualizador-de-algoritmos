@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Data.SQLite;
-using System.Windows.Controls.Primitives;
-using System.Windows.Controls;
 
 namespace visualizador_de_algoritmos
 {
@@ -17,10 +15,8 @@ namespace visualizador_de_algoritmos
             MostrarAlgoritmosDisponibles();
         }
 
-        //
-        //Metodos
-        //
-        private void MostrarAlgoritmosDisponibles()
+        #region Metodos
+        public void MostrarAlgoritmosDisponibles()
         {
             cmbAlgoritmo.Items.Clear();//Limpiar elementos del combobox
             try
@@ -75,9 +71,10 @@ namespace visualizador_de_algoritmos
             }
             catch (Exception v) { MessageBox.Show("Error: " + v, "Aviso", MessageBoxButtons.OK); Close(); }
         }
-        // Copia el codigo dependiendo del lenguaje de programacion elegido
         private void CopiarCodigo()
         {
+            // Copia el codigo dependiendo del lenguaje de programacion elegido
+
             if (tbLenguajesDeProgramacion.SelectedTab == tabPageCSharp)
             {
                 Clipboard.SetText(txtCodigoCSharp.Text + " ");
@@ -91,10 +88,8 @@ namespace visualizador_de_algoritmos
                 Clipboard.SetText(txtCodigoJavascript.Text + " ");
             }
         }
+        #endregion
 
-        //
-        //Eventos
-        //
         #region Eventos
         private void BtnCopiarCodigo_Click(object sender, EventArgs e)
         {
