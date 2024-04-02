@@ -58,7 +58,6 @@ namespace visualizador_de_algoritmos
         {
             btnFinal.Enabled = true;
             btnInicio.Enabled = true;
-            btnReiniciar.Enabled = true;
             btnReproducir.Enabled = true;
             btnBarajear.Enabled = true; 
         }
@@ -148,17 +147,13 @@ namespace visualizador_de_algoritmos
         {
             ElegirAlgoritmo(cmbAlgoritmo, CopiarValores(numerosGenerados));  
         }
-        private void BtnReiniciar_Click(object sender, EventArgs e)
-        {
-            ActualizarGrafica(numerosGenerados);
-        }            
+   
         private void BtnInicio_Click(object sender, EventArgs e)
         {
-
-        } 
+            ActualizarGrafica(numerosGenerados);
+        }
         private void BtnFinal_Click(object sender, EventArgs e)
         {
-
         }
         private void TbVelocidad_Scroll(object sender, EventArgs e)
         {
