@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelContenido = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -89,9 +89,9 @@
             this.chart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.chart.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.chart.BorderSkin.PageColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            chartArea3.Name = "ChartArea1";
-            this.chart.ChartAreas.Add(chartArea3);
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            chartArea1.Name = "ChartArea1";
+            this.chart.ChartAreas.Add(chartArea1);
             this.chart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chart.Location = new System.Drawing.Point(0, 10);
             this.chart.Name = "chart";
@@ -100,9 +100,9 @@
             this.chart.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))))};
             this.chart.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series3.ChartArea = "ChartArea1";
-            series3.Name = "Series1";
-            this.chart.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.Name = "Series1";
+            this.chart.Series.Add(series1);
             this.chart.Size = new System.Drawing.Size(770, 304);
             this.chart.TabIndex = 2;
             this.chart.Text = "chart1";
@@ -222,7 +222,6 @@
             this.toolTip.SetToolTip(this.btnReproducir, "Reproducir");
             this.btnReproducir.UseVisualStyleBackColor = false;
             this.btnReproducir.Click += new System.EventHandler(this.BtnReproducir_Click);
-            this.btnReproducir.MouseHover += new System.EventHandler(this.BtnReproducir_MouseHover);
             // 
             // btnReiniciar
             // 
@@ -318,9 +317,6 @@
             this.cmbAlgoritmo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbAlgoritmo.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cmbAlgoritmo.FormattingEnabled = true;
-            this.cmbAlgoritmo.Items.AddRange(new object[] {
-            "Bubble sort",
-            "Selecion sort"});
             this.cmbAlgoritmo.Location = new System.Drawing.Point(561, 18);
             this.cmbAlgoritmo.Name = "cmbAlgoritmo";
             this.cmbAlgoritmo.Size = new System.Drawing.Size(193, 40);

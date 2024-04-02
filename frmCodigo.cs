@@ -12,13 +12,13 @@ namespace visualizador_de_algoritmos
         public frmCodigo()
         {
             InitializeComponent();
-            MostrarAlgoritmosDisponibles();
+            MostrarAlgoritmosDisponibles(cmbAlgoritmo);
         }
 
         #region Metodos
-        public void MostrarAlgoritmosDisponibles()
+        public void MostrarAlgoritmosDisponibles(ComboBox comboBox)
         {
-            cmbAlgoritmo.Items.Clear();//Limpiar elementos del combobox
+            comboBox.Items.Clear();//Limpiar elementos del combobox
             try
             {
                 using (SQLiteConnection connection = new SQLiteConnection(cadenaConexion))
@@ -33,7 +33,7 @@ namespace visualizador_de_algoritmos
                         {
                             while (reader.Read())
                             {
-                                cmbAlgoritmo.Items.Add(reader.GetString(0));
+                                comboBox.Items.Add(reader.GetString(0));
                             }
                         }
                     }
