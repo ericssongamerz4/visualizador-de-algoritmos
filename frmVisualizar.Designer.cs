@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelContenido = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -88,9 +88,9 @@
             this.chart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.chart.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.chart.BorderSkin.PageColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            chartArea2.Name = "ChartArea1";
-            this.chart.ChartAreas.Add(chartArea2);
+            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            chartArea3.Name = "ChartArea1";
+            this.chart.ChartAreas.Add(chartArea3);
             this.chart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chart.Location = new System.Drawing.Point(0, 10);
             this.chart.Name = "chart";
@@ -99,9 +99,9 @@
             this.chart.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))))};
             this.chart.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series2.ChartArea = "ChartArea1";
-            series2.Name = "Series1";
-            this.chart.Series.Add(series2);
+            series3.ChartArea = "ChartArea1";
+            series3.Name = "Series1";
+            this.chart.Series.Add(series3);
             this.chart.Size = new System.Drawing.Size(770, 304);
             this.chart.TabIndex = 2;
             this.chart.Text = "chart1";
@@ -137,7 +137,7 @@
             this.lblVelocidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVelocidad.AutoSize = true;
             this.lblVelocidad.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.lblVelocidad.Location = new System.Drawing.Point(322, 17);
+            this.lblVelocidad.Location = new System.Drawing.Point(348, 17);
             this.lblVelocidad.Name = "lblVelocidad";
             this.lblVelocidad.Size = new System.Drawing.Size(45, 38);
             this.lblVelocidad.TabIndex = 10;
@@ -158,10 +158,11 @@
             // 
             this.tbVelocidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbVelocidad.Enabled = false;
             this.tbVelocidad.Location = new System.Drawing.Point(168, 24);
             this.tbVelocidad.Maximum = 5;
             this.tbVelocidad.Name = "tbVelocidad";
-            this.tbVelocidad.Size = new System.Drawing.Size(148, 69);
+            this.tbVelocidad.Size = new System.Drawing.Size(173, 69);
             this.tbVelocidad.TabIndex = 5;
             this.tbVelocidad.TickStyle = System.Windows.Forms.TickStyle.None;
             this.tbVelocidad.Value = 1;
@@ -258,10 +259,10 @@
             // 
             this.lblElementos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblElementos.AutoSize = true;
-            this.lblElementos.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblElementos.Location = new System.Drawing.Point(343, 21);
+            this.lblElementos.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.lblElementos.Location = new System.Drawing.Point(334, 13);
             this.lblElementos.Name = "lblElementos";
-            this.lblElementos.Size = new System.Drawing.Size(34, 28);
+            this.lblElementos.Size = new System.Drawing.Size(47, 38);
             this.lblElementos.TabIndex = 13;
             this.lblElementos.Text = "10";
             // 

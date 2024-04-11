@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
 
 namespace visualizador_de_algoritmos
 {
@@ -9,6 +8,7 @@ namespace visualizador_de_algoritmos
         int elementos = 10;        
         int[] numerosGenerados;
         int velocidadDeReproducion = 1;
+        bool estaReproduciendo = false;
 
         public frmVisualizar()
         {
@@ -34,8 +34,7 @@ namespace visualizador_de_algoritmos
                 numerosGenerados[i] = numeroAleatorio;
             }
         }
-
-        private void ActualizarGrafica(int[] arr)
+        private void ActualizarGrafica(int[] arr)//Muestra los valores en la grafica
         {
             chart.Series["Series1"].Points.Clear();//Limpia los valores anteriores
 
@@ -43,8 +42,7 @@ namespace visualizador_de_algoritmos
             {
                 chart.Series["Series1"].Points.AddXY(i + 1, arr[i]);
             }
-        }//Muestra los valores en la grafica
-
+        }
         private int[] CopiarValores(int[] arrayOriginal)//Se duplica el array original en caso de que se necesiten los valores originales.
         {
             int[] numerosAOrdenar = new int[arrayOriginal.Length];
@@ -53,33 +51,14 @@ namespace visualizador_de_algoritmos
 
            return numerosAOrdenar;
         }
-
         private void HabilitarBotones()
         {
             btnFinal.Enabled = true;
             btnInicio.Enabled = true;
             btnReproducir.Enabled = true;
             btnBarajear.Enabled = true; 
-        }
-
-        private void ElegirAlgoritmo(ComboBox comboBox, int[] arr)//Elige el algoritmo a utilizar en base al texto del combobox
-        {
-            switch (comboBox.Text)
-            {
-                case "SELECTION SORT":
-                    SelectionSort(arr);
-                    break;
-
-                case "BUBBLE SORT":
-                    break;
-
-
-                default:
-                    break;
-            }
-
-        }
-        
+            tbVelocidad.Enabled = true;
+        } 
         private void DeterminarVelocidad()
         {
             //Estos valores son de prueba
@@ -105,52 +84,107 @@ namespace visualizador_de_algoritmos
                     break;
             }
         }
+        private void DetenerTimer()
+        {
+            //Detiene el timer
+            timer.Stop();
+            estaReproduciendo = false;
+        }
+        private void ElegirAlgoritmo(int[] arr)//Elige el algoritmo a utilizar en base al texto del combobox
+        {
+            switch (cmbAlgoritmo.Text)
+            {
+                case "SELECTION SORT":
+                    SelectionSort(arr);
+                    break;
+
+                case "BUBBLE SORT":
+                    BubbleSort(arr);
+                    break;
+
+                default:
+                    break;
+            }
+        }
 
         #region Algoritmos de Ordenamiento
+
         private void SelectionSort(int[] arr)
+        {
+
+        }
+
+        private void BubbleSort(int[] arr)
         {
             int n = arr.Length;
 
-            // One by one move boundary of unsorted subarray 
-            for (int i = 0; i < n - 1; i++)
-            {
-                // Find the minimum element in unsorted array 
-                int min_idx = i;
-                for (int j = i + 1; j < n; j++)
-                    if (arr[j] < arr[min_idx])
-                        min_idx = j;
+            int i, j, temp;
+            bool swapped;
 
-                // Swap the found minimum element with the first element 
-                int temp = arr[min_idx];
-                arr[min_idx] = arr[i];
-                arr[i] = temp;
-
+            for (i = 0; i < n - 1; i++)
+            {                
                 //Actualizar la grafica despues de cada cambio
                 ActualizarGrafica(arr);
 
+                swapped = false;
+                for (j = 0; j < n - i - 1; j++)
+                {
+                    if (arr[j] > arr[j + 1])
+                    {
+
+                        // Intercambia arr[j] y arr[j+1]
+                        temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                        swapped = true;
+                    }
+                }
+
+                // If no two elements were
+                // swapped by inner loop, then break
+                if (swapped == false)
+                    break;
             }
-        }//
+        }
+            #endregion
 
-        #endregion
-
-        #endregion
+            #endregion
 
         #region Eventos
         private void BtnBarajear_Click(object sender, EventArgs e)
         {
             GenerarNumerosAleatorios(tbNumeroDeElementos.Value);
 
-            //Se vuelve a generar los valores 
-            ActualizarGrafica(numerosGenerados);
+            ActualizarGrafica(numerosGenerados);//Se vuelve a generar los valores 
+
+            DetenerTimer();
         }
         private void BtnReproducir_Click(object sender, EventArgs e)
         {
-            ElegirAlgoritmo(cmbAlgoritmo, CopiarValores(numerosGenerados));  
+            if (!estaReproduciendo)
+            {
+                //cambia el icono a pausa
+                btnReproducir.IconChar = FontAwesome.Sharp.IconChar.Pause;
+                
+                //Empieza el timer
+                timer.Start();
+                estaReproduciendo = true;
+            }
+            else //estaReproduciendo
+            {
+                //cambia el icono a reproducir
+                btnReproducir.IconChar = FontAwesome.Sharp.IconChar.Play;
+
+                //Detiene el timer
+                timer.Stop();
+                estaReproduciendo=false;
+            }
         }
-   
         private void BtnInicio_Click(object sender, EventArgs e)
         {
-            ActualizarGrafica(numerosGenerados);
+            DetenerTimer();
+
+            ActualizarGrafica(numerosGenerados);//Vuelve a mostrar el array original
         }
         private void BtnFinal_Click(object sender, EventArgs e)
         {
@@ -167,23 +201,25 @@ namespace visualizador_de_algoritmos
             DeterminarVelocidad();
         }
         private void TbNumeroDeElementos_Scroll(object sender, EventArgs e)
-        {
+        {        
             elementos = tbNumeroDeElementos.Value;
             //Mostrar la cantidad de elementos a utilizar
             lblElementos.Text = elementos.ToString();
-
             //Genera los elementos aleatorios
             GenerarNumerosAleatorios(tbNumeroDeElementos.Value);
             //Se muestran los elementos a ordenar en la grafica
             ActualizarGrafica(numerosGenerados);
-        }        
+            
+            DetenerTimer();
+
+        }
         private void cmbAlgoritmo_SelectedIndexChanged(object sender, EventArgs e)
         {
             HabilitarBotones();
         }
         private void timer_Tick(object sender, EventArgs e)
         {
-
+            ElegirAlgoritmo(CopiarValores(numerosGenerados));
         }
         #endregion
     }
