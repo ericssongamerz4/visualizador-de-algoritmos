@@ -117,4 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>VisualSort es un programa que muestra cómo funcionan los algoritmos de ordenamiento más populares de manera visual. También ayuda a comprender como funcionan los algoritmos de ordenamiento y te mostrara el código de cada algoritmo en varios lenguajes de programación para que lo puedas aplicar en tus programas.
+</value>
+  </data>
 </root>
