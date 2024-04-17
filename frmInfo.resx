@@ -117,4 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox2.Text" xml:space="preserve">
+    <value>Un algoritmo de ordenamiento se puede definir como un conjunto de instrucciones comprensibles, realizables y precisos que se utilizan para organizar una lista de elementos en un orden específico. 
+En las ciencias de la computación, los algoritmos de ordenamiento son fundamentales para la manipulación eficiente de datos y son ampliamente utilizados en la programación y la gestión de bases de datos para acelerar la búsqueda y recuperación de información. 
+Estos algoritmos permiten reorganizar elementos en una secuencia dada, como números, cadenas de texto o registros, de acuerdo con un criterio particular, como orden ascendente o descendente. 
+
+
+
+</value>
+  </data>
 </root>

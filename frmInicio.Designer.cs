@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnAjustes = new FontAwesome.Sharp.IconButton();
+            this.btnAcercaDe = new FontAwesome.Sharp.IconButton();
             this.btnCodigo = new FontAwesome.Sharp.IconButton();
             this.btnInfo = new FontAwesome.Sharp.IconButton();
             this.btnVisualizar = new FontAwesome.Sharp.IconButton();
@@ -44,15 +43,9 @@
             this.btnCerrar = new FontAwesome.Sharp.IconPictureBox();
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).BeginInit();
@@ -62,16 +55,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panelDesktop.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(9)))), ((int)(((byte)(9)))));
-            this.panelMenu.Controls.Add(this.btnAjustes);
+            this.panelMenu.Controls.Add(this.btnAcercaDe);
             this.panelMenu.Controls.Add(this.btnCodigo);
             this.panelMenu.Controls.Add(this.btnInfo);
             this.panelMenu.Controls.Add(this.btnVisualizar);
@@ -80,32 +69,32 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(250, 570);
+            this.panelMenu.Size = new System.Drawing.Size(250, 629);
             this.panelMenu.TabIndex = 0;
             // 
-            // btnAjustes
+            // btnAcercaDe
             // 
-            this.btnAjustes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAjustes.FlatAppearance.BorderSize = 0;
-            this.btnAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAjustes.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAjustes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
-            this.btnAjustes.IconChar = FontAwesome.Sharp.IconChar.Tools;
-            this.btnAjustes.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
-            this.btnAjustes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAjustes.IconSize = 40;
-            this.btnAjustes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAjustes.Location = new System.Drawing.Point(0, 350);
-            this.btnAjustes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnAjustes.Name = "btnAjustes";
-            this.btnAjustes.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnAjustes.Size = new System.Drawing.Size(250, 70);
-            this.btnAjustes.TabIndex = 5;
-            this.btnAjustes.Text = "Ajustes";
-            this.btnAjustes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAjustes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAjustes.UseVisualStyleBackColor = true;
-            this.btnAjustes.Click += new System.EventHandler(this.btnAjustes_Click);
+            this.btnAcercaDe.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnAcercaDe.FlatAppearance.BorderSize = 0;
+            this.btnAcercaDe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAcercaDe.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcercaDe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
+            this.btnAcercaDe.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle;
+            this.btnAcercaDe.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
+            this.btnAcercaDe.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnAcercaDe.IconSize = 40;
+            this.btnAcercaDe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAcercaDe.Location = new System.Drawing.Point(0, 559);
+            this.btnAcercaDe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAcercaDe.Name = "btnAcercaDe";
+            this.btnAcercaDe.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnAcercaDe.Size = new System.Drawing.Size(250, 70);
+            this.btnAcercaDe.TabIndex = 5;
+            this.btnAcercaDe.Text = "Acerca de";
+            this.btnAcercaDe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAcercaDe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAcercaDe.UseVisualStyleBackColor = true;
+            this.btnAcercaDe.Click += new System.EventHandler(this.btnAjustes_Click);
             // 
             // btnCodigo
             // 
@@ -215,7 +204,7 @@
             this.panelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBarraTitulo.Location = new System.Drawing.Point(250, 0);
             this.panelBarraTitulo.Name = "panelBarraTitulo";
-            this.panelBarraTitulo.Size = new System.Drawing.Size(800, 70);
+            this.panelBarraTitulo.Size = new System.Drawing.Size(922, 70);
             this.panelBarraTitulo.TabIndex = 1;
             this.panelBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBarraTitulo_MouseDown);
             // 
@@ -242,7 +231,7 @@
             this.btnMaximizar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
             this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximizar.IconSize = 45;
-            this.btnMaximizar.Location = new System.Drawing.Point(706, 3);
+            this.btnMaximizar.Location = new System.Drawing.Point(828, 3);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(45, 45);
             this.btnMaximizar.TabIndex = 4;
@@ -259,7 +248,7 @@
             this.btnMinimizar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
             this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimizar.IconSize = 45;
-            this.btnMinimizar.Location = new System.Drawing.Point(655, 3);
+            this.btnMinimizar.Location = new System.Drawing.Point(777, 3);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(45, 45);
             this.btnMinimizar.TabIndex = 3;
@@ -276,7 +265,7 @@
             this.btnCerrar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(9)))), ((int)(((byte)(89)))));
             this.btnCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCerrar.IconSize = 45;
-            this.btnCerrar.Location = new System.Drawing.Point(757, 3);
+            this.btnCerrar.Location = new System.Drawing.Point(879, 3);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(45, 45);
             this.btnCerrar.TabIndex = 2;
@@ -302,106 +291,23 @@
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(250, 70);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(800, 500);
+            this.panelDesktop.Size = new System.Drawing.Size(922, 559);
             this.panelDesktop.TabIndex = 3;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(15);
-            this.panel2.Size = new System.Drawing.Size(800, 500);
+            this.panel2.Size = new System.Drawing.Size(922, 559);
             this.panel2.TabIndex = 5;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(15, 15);
-            this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(5);
-            this.panel3.Size = new System.Drawing.Size(770, 470);
-            this.panel3.TabIndex = 5;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.richTextBox2);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(5, 276);
-            this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(5);
-            this.panel4.Size = new System.Drawing.Size(760, 189);
-            this.panel4.TabIndex = 13;
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox2.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.richTextBox2.Location = new System.Drawing.Point(5, 5);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(750, 179);
-            this.richTextBox2.TabIndex = 11;
-            this.richTextBox2.Text = resources.GetString("richTextBox2.Text");
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(5, 228);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(668, 48);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "¿Qué es algoritmo de ordenamiento?";
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.richTextBox1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(5, 70);
-            this.panel5.Name = "panel5";
-            this.panel5.Padding = new System.Windows.Forms.Padding(5);
-            this.panel5.Size = new System.Drawing.Size(760, 158);
-            this.panel5.TabIndex = 11;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.richTextBox1.Location = new System.Drawing.Point(5, 5);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(750, 148);
-            this.richTextBox1.TabIndex = 9;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(480, 65);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "¿Qué es VisualSort?";
             // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1050, 570);
+            this.ClientSize = new System.Drawing.Size(1172, 629);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelBarraTitulo);
             this.Controls.Add(this.panelMenu);
@@ -417,11 +323,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.panelDesktop.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -431,7 +332,7 @@
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnVisualizar;
-        private FontAwesome.Sharp.IconButton btnAjustes;
+        private FontAwesome.Sharp.IconButton btnAcercaDe;
         private FontAwesome.Sharp.IconButton btnCodigo;
         private FontAwesome.Sharp.IconButton btnInfo;
         private System.Windows.Forms.Panel panelBarraTitulo;
@@ -442,15 +343,9 @@
         private FontAwesome.Sharp.IconPictureBox btnCerrar;
         private FontAwesome.Sharp.IconPictureBox btnMaximizar;
         private FontAwesome.Sharp.IconPictureBox btnMinimizar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

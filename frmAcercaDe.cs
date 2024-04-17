@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace visualizador_de_algoritmos
 {
-    public partial class frmAjustes : Form
+    public partial class frmAcercaDe : Form
     {
-        public frmAjustes()
+        public frmAcercaDe()
         {
             InitializeComponent();
         }

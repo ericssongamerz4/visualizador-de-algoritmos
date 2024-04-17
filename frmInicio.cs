@@ -141,7 +141,7 @@ namespace visualizador_de_algoritmos
         private void btnAjustes_Click(object sender, EventArgs e)
         {
             BotonActivado(sender, RGBColors.azul);
-            OpenChildForm(new frmAjustes());
+            OpenChildForm(new frmAcercaDe());
         }        
         private void pbInicio_Click(object sender, EventArgs e)
         {

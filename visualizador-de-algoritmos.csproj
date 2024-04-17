@@ -77,11 +77,11 @@
     <Content Include="algoritmos.s3db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Compile Include="frmAjustes.cs">
+    <Compile Include="frmAcercaDe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAjustes.Designer.cs">
-      <DependentUpon>frmAjustes.cs</DependentUpon>
+    <Compile Include="frmAcercaDe.Designer.cs">
+      <DependentUpon>frmAcercaDe.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCodigo.cs">
       <SubType>Form</SubType>
@@ -109,8 +109,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAjustes.resx">
-      <DependentUpon>frmAjustes.cs</DependentUpon>
+    <EmbeddedResource Include="frmAcercaDe.resx">
+      <DependentUpon>frmAcercaDe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCodigo.resx">
       <DependentUpon>frmCodigo.cs</DependentUpon>
