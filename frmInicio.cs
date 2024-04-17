@@ -40,8 +40,10 @@ namespace visualizador_de_algoritmos
         {
             InitializeComponent();
 
-            leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 70);
+            leftBorderBtn = new Panel
+            {
+                Size = new Size(7, 70)
+            };
             panelMenu.Controls.Add(leftBorderBtn);
 
             //Form
@@ -103,10 +105,19 @@ namespace visualizador_de_algoritmos
         private void OpenChildForm(Form childForm)
         {
             //open only form
+            currentChildForm?.Close();
+            /*
+             
+            currentChildForm?.Close(); 
+            
+            //es lo mismo que
+                        
             if (currentChildForm != null)
             {
                 currentChildForm.Close();
             }
+
+             */
             currentChildForm = childForm;
             //End
             childForm.TopLevel = false;
@@ -123,43 +134,40 @@ namespace visualizador_de_algoritmos
         //Eventos
         //
         #region Botones de los Formularios
-        private void btnVisualizar_Click(object sender, EventArgs e)
+        private void BtnVisualizar_Click(object sender, EventArgs e)
         {
             BotonActivado(sender, RGBColors.verde);
             OpenChildForm(new frmVisualizar());
         }
-        private void btnInfo_Click(object sender, EventArgs e)
+        private void BtnInfo_Click(object sender, EventArgs e)
         {
             BotonActivado(sender, RGBColors.amarillo);
-            OpenChildForm(new frmInfo());
+            OpenChildForm(new FrmInfo());
         }
-        private void btnCodigo_Click(object sender, EventArgs e)
+        private void BtnCodigo_Click(object sender, EventArgs e)
         {
             BotonActivado(sender, RGBColors.naranja);
             OpenChildForm(new frmCodigo());
         }
-        private void btnAjustes_Click(object sender, EventArgs e)
+        private void BtnAcercaDe_Click(object sender, EventArgs e)
         {
             BotonActivado(sender, RGBColors.azul);
-            OpenChildForm(new frmAcercaDe());
+            OpenChildForm(new FrmAcercaDe());
         }        
-        private void pbInicio_Click(object sender, EventArgs e)
+        private void PbInicio_Click(object sender, EventArgs e)
         {
-            if (currentChildForm != null)
-            {
-                currentChildForm.Close();
-            }
+            currentChildForm?.Close();//Si el formulario no es null lo cierra   
             Reset();
-        }      
-        #endregion
+        }
+        private void BtnMaximizar_MouseHover(object sender, EventArgs e)
+        {
+            IconPictureBox pictureBox = (IconPictureBox)sender;
+            toolTip1.SetToolTip(pictureBox, "Maximizar");
+        }
 
         #region Cerrar-Maximizar-Minimizar
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-        private void btnMaximizar_Click(object sender, EventArgs e)
+        private void BtnCerrar_Click(object sender, EventArgs e) => Application.Exit();
+        private void BtnMaximizar_Click(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Normal)
             {
@@ -172,10 +180,7 @@ namespace visualizador_de_algoritmos
                 btnMaximizar.IconChar = IconChar.WindowMaximize;
             }
         }
-        private void btnMinimizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
+        private void BtnMinimizar_Click(object sender, EventArgs e) => WindowState = FormWindowState.Minimized;
         #endregion
 
         #region Arrastrar Form
@@ -184,38 +189,13 @@ namespace visualizador_de_algoritmos
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        private void panelBarraTitulo_MouseDown(object sender, MouseEventArgs e)
+        private void PanelBarraTitulo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         #endregion
 
-        #region Hover
-        private void btnCerrar_MouseHover(object sender, EventArgs e)
-        {
-            IconPictureBox pictureBox = (IconPictureBox) sender;
-            toolTip1.SetToolTip(pictureBox, "Cerrar");
-        }
-
-        private void btnMaximizar_MouseHover(object sender, EventArgs e)
-        {
-            IconPictureBox pictureBox = (IconPictureBox)sender;
-            toolTip1.SetToolTip(pictureBox, "Maximizar");
-        }
-
-        private void btnMinimizar_MouseHover(object sender, EventArgs e)
-        {
-            IconPictureBox pictureBox = (IconPictureBox)sender;
-            toolTip1.SetToolTip(pictureBox, "Minimizar");
-        }
-
-        private void pbInicio_MouseHover(object sender, EventArgs e)
-        {
-            PictureBox pictureBox = (PictureBox)sender;
-            toolTip1.SetToolTip(pictureBox, "Inicio");
-        }        
         #endregion
-
     }
 }

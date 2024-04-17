@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace visualizador_de_algoritmos
 {
-    public partial class frmInfo : Form
+    public partial class FrmInfo : Form
     {
-        public frmInfo()
+        public FrmInfo()
         {
             InitializeComponent();
         }

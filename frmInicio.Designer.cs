@@ -43,9 +43,8 @@
             this.btnCerrar = new FontAwesome.Sharp.IconPictureBox();
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).BeginInit();
@@ -84,17 +83,17 @@
             this.btnAcercaDe.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnAcercaDe.IconSize = 40;
             this.btnAcercaDe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAcercaDe.Location = new System.Drawing.Point(0, 559);
+            this.btnAcercaDe.Location = new System.Drawing.Point(0, 529);
             this.btnAcercaDe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAcercaDe.Name = "btnAcercaDe";
             this.btnAcercaDe.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnAcercaDe.Size = new System.Drawing.Size(250, 70);
+            this.btnAcercaDe.Size = new System.Drawing.Size(250, 100);
             this.btnAcercaDe.TabIndex = 5;
             this.btnAcercaDe.Text = "Acerca de";
             this.btnAcercaDe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAcercaDe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAcercaDe.UseVisualStyleBackColor = true;
-            this.btnAcercaDe.Click += new System.EventHandler(this.btnAjustes_Click);
+            this.btnAcercaDe.Click += new System.EventHandler(this.BtnAcercaDe_Click);
             // 
             // btnCodigo
             // 
@@ -118,7 +117,7 @@
             this.btnCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCodigo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCodigo.UseVisualStyleBackColor = true;
-            this.btnCodigo.Click += new System.EventHandler(this.btnCodigo_Click);
+            this.btnCodigo.Click += new System.EventHandler(this.BtnCodigo_Click);
             // 
             // btnInfo
             // 
@@ -142,7 +141,7 @@
             this.btnInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInfo.UseVisualStyleBackColor = true;
-            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            this.btnInfo.Click += new System.EventHandler(this.BtnInfo_Click);
             // 
             // btnVisualizar
             // 
@@ -166,7 +165,7 @@
             this.btnVisualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVisualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVisualizar.UseVisualStyleBackColor = true;
-            this.btnVisualizar.Click += new System.EventHandler(this.btnVisualizar_Click);
+            this.btnVisualizar.Click += new System.EventHandler(this.BtnVisualizar_Click);
             // 
             // panel1
             // 
@@ -190,8 +189,8 @@
             this.pbInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbInicio.TabIndex = 0;
             this.pbInicio.TabStop = false;
-            this.pbInicio.Click += new System.EventHandler(this.pbInicio_Click);
-            this.pbInicio.MouseHover += new System.EventHandler(this.pbInicio_MouseHover);
+            this.toolTip1.SetToolTip(this.pbInicio, "Ir al inicio");
+            this.pbInicio.Click += new System.EventHandler(this.PbInicio_Click);
             // 
             // panelBarraTitulo
             // 
@@ -206,7 +205,7 @@
             this.panelBarraTitulo.Name = "panelBarraTitulo";
             this.panelBarraTitulo.Size = new System.Drawing.Size(922, 70);
             this.panelBarraTitulo.TabIndex = 1;
-            this.panelBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBarraTitulo_MouseDown);
+            this.panelBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelBarraTitulo_MouseDown);
             // 
             // iconCurrentChildForm
             // 
@@ -236,8 +235,8 @@
             this.btnMaximizar.Size = new System.Drawing.Size(45, 45);
             this.btnMaximizar.TabIndex = 4;
             this.btnMaximizar.TabStop = false;
-            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
-            this.btnMaximizar.MouseHover += new System.EventHandler(this.btnMaximizar_MouseHover);
+            this.btnMaximizar.Click += new System.EventHandler(this.BtnMaximizar_Click);
+            this.btnMaximizar.MouseHover += new System.EventHandler(this.BtnMaximizar_MouseHover);
             // 
             // btnMinimizar
             // 
@@ -253,8 +252,8 @@
             this.btnMinimizar.Size = new System.Drawing.Size(45, 45);
             this.btnMinimizar.TabIndex = 3;
             this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            this.btnMinimizar.MouseHover += new System.EventHandler(this.btnMinimizar_MouseHover);
+            this.toolTip1.SetToolTip(this.btnMinimizar, "Minimizar");
+            this.btnMinimizar.Click += new System.EventHandler(this.BtnMinimizar_Click);
             // 
             // btnCerrar
             // 
@@ -270,8 +269,8 @@
             this.btnCerrar.Size = new System.Drawing.Size(45, 45);
             this.btnCerrar.TabIndex = 2;
             this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            this.btnCerrar.MouseHover += new System.EventHandler(this.btnCerrar_MouseHover);
+            this.toolTip1.SetToolTip(this.btnCerrar, "Cerrar");
+            this.btnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // lblTitleChildForm
             // 
@@ -344,7 +343,6 @@
         private FontAwesome.Sharp.IconPictureBox btnMaximizar;
         private FontAwesome.Sharp.IconPictureBox btnMinimizar;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.ToolTip toolTip2;
         private System.Windows.Forms.Panel panel2;
     }
 }

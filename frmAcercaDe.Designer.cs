@@ -1,6 +1,6 @@
 ﻿namespace visualizador_de_algoritmos
 {
-    partial class frmAcercaDe
+    partial class FrmAcercaDe
     {
         /// <summary>
         /// Required designer variable.
@@ -29,41 +29,67 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAcercaDe));
-            this.panelBarraTitulo = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAcercaDe));
+            this.panel = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnGitHub = new FontAwesome.Sharp.IconPictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panelBarraTitulo.SuspendLayout();
+            this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnGitHub)).BeginInit();
             this.SuspendLayout();
             // 
-            // panelBarraTitulo
+            // panel
             // 
-            this.panelBarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(9)))), ((int)(((byte)(9)))));
-            this.panelBarraTitulo.Controls.Add(this.label9);
-            this.panelBarraTitulo.Controls.Add(this.label10);
-            this.panelBarraTitulo.Controls.Add(this.label4);
-            this.panelBarraTitulo.Controls.Add(this.label8);
-            this.panelBarraTitulo.Controls.Add(this.label7);
-            this.panelBarraTitulo.Controls.Add(this.label6);
-            this.panelBarraTitulo.Controls.Add(this.label5);
-            this.panelBarraTitulo.Controls.Add(this.label3);
-            this.panelBarraTitulo.Controls.Add(this.btnGitHub);
-            this.panelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBarraTitulo.Location = new System.Drawing.Point(0, 459);
-            this.panelBarraTitulo.Name = "panelBarraTitulo";
-            this.panelBarraTitulo.Size = new System.Drawing.Size(922, 100);
-            this.panelBarraTitulo.TabIndex = 2;
+            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(9)))), ((int)(((byte)(9)))));
+            this.panel.Controls.Add(this.label9);
+            this.panel.Controls.Add(this.label10);
+            this.panel.Controls.Add(this.label4);
+            this.panel.Controls.Add(this.label8);
+            this.panel.Controls.Add(this.label7);
+            this.panel.Controls.Add(this.label6);
+            this.panel.Controls.Add(this.label5);
+            this.panel.Controls.Add(this.label3);
+            this.panel.Controls.Add(this.btnGitHub);
+            this.panel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel.Location = new System.Drawing.Point(0, 459);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(922, 100);
+            this.panel.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.label9.Location = new System.Drawing.Point(647, 50);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(275, 30);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Claudia Gabriela Pulido Lúa";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Black", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.label10.Location = new System.Drawing.Point(547, 50);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(109, 30);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Docente:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -77,6 +103,58 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Taller de Investigación II";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.label8.Location = new System.Drawing.Point(142, 49);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(285, 30);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "ericssongamerz@gmail.com";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Black", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.label7.Location = new System.Drawing.Point(552, 11);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(104, 30);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Materia:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Black", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.label6.Location = new System.Drawing.Point(51, 49);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(94, 30);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Correo:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Black", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.label5.Location = new System.Drawing.Point(12, 11);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(133, 30);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Hecho por:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -130,84 +208,6 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "¿Qué es VisualSort?";
             // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Black", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.label5.Location = new System.Drawing.Point(12, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(133, 30);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Hecho por:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Black", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.label6.Location = new System.Drawing.Point(51, 49);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 30);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Correo:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Black", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.label7.Location = new System.Drawing.Point(552, 11);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 30);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Materia:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.label8.Location = new System.Drawing.Point(142, 49);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(285, 30);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "ericssongamerz@gmail.com";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.label9.Location = new System.Drawing.Point(647, 50);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(275, 30);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Claudia Gabriela Pulido Lúa";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Black", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.label10.Location = new System.Drawing.Point(547, 50);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(109, 30);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Docente:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // frmAcercaDe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -216,12 +216,12 @@
             this.ClientSize = new System.Drawing.Size(922, 559);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.panelBarraTitulo);
+            this.Controls.Add(this.panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAcercaDe";
             this.Text = "Ajustes";
-            this.panelBarraTitulo.ResumeLayout(false);
-            this.panelBarraTitulo.PerformLayout();
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnGitHub)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -230,7 +230,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panelBarraTitulo;
+        private System.Windows.Forms.Panel panel;
         private FontAwesome.Sharp.IconPictureBox btnGitHub;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
