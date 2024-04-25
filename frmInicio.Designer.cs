@@ -43,7 +43,6 @@
             this.btnCerrar = new FontAwesome.Sharp.IconPictureBox();
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -53,7 +52,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
-            this.panelDesktop.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -286,21 +284,11 @@
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.panelDesktop.Controls.Add(this.panel2);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(250, 70);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(922, 559);
             this.panelDesktop.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(15);
-            this.panel2.Size = new System.Drawing.Size(922, 559);
-            this.panel2.TabIndex = 5;
             // 
             // frmInicio
             // 
@@ -321,7 +309,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            this.panelDesktop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -343,7 +330,6 @@
         private FontAwesome.Sharp.IconPictureBox btnMaximizar;
         private FontAwesome.Sharp.IconPictureBox btnMinimizar;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Panel panel2;
     }
 }
 

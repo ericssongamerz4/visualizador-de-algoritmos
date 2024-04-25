@@ -117,13 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="richTextBox2.Text" xml:space="preserve">
-    <value>Un algoritmo de ordenamiento se puede definir como un conjunto de instrucciones comprensibles, realizables y precisos que se utilizan para organizar una lista de elementos en un orden específico. 
-En las ciencias de la computación, los algoritmos de ordenamiento son fundamentales para la manipulación eficiente de datos y son ampliamente utilizados en la programación y la gestión de bases de datos para acelerar la búsqueda y recuperación de información. 
-Estos algoritmos permiten reorganizar elementos en una secuencia dada, como números, cadenas de texto o registros, de acuerdo con un criterio particular, como orden ascendente o descendente. 
+  <data name="label5.Text" xml:space="preserve">
+    <value>1.- Complejidad temporal: Es una medida de cuánto tiempo lleva ejecutar un algoritmo, se utiliza para categorizar los algoritmos de ordenamiento. El rendimiento en el peor de los casos, el caso promedio y el mejor de los casos de un algoritmo de clasificación se puede utilizar para cuantificar la complejidad temporal del proceso. 
 
+2.- Complejidad espacial: Los algoritmos de ordenamiento también tienen complejidad espacial, que es la cantidad de memoria necesaria para ejecutar el algoritmo. 
 
+3.- Estabilidad: Se dice que un algoritmo de ordenamiento es estable si el orden relativo de elementos iguales se conserva después de la clasificación. Esto es importante en determinadas aplicaciones donde se debe mantener el orden original de elementos iguales. 
 
+4.- Adaptabilidad: Un algoritmo de ordenamiento adaptativo es aquel que aprovecha el orden preexistente en los datos para mejorar el rendimiento.
+</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Un algoritmo de ordenamiento es un conjunto de instrucciones o reglas definidas que se utilizan para organizar los elementos de una lista en un orden específico, como numérico, alfabético, u otro criterio definido. </value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>VisualSort es un programa que muestra cómo funcionan los algoritmos de ordenamiento más populares de manera visual. También ayuda a comprender como funcionan los algoritmos de ordenamiento y te mostrara el código de cada algoritmo en varios lenguajes de programación para que lo puedas aplicar en tus programas.
+</value>
+  </data>
+  <data name="label22.Text" xml:space="preserve">
+    <value>Un algoritmo de ordenamiento es un conjunto de instrucciones o reglas definidas que se utilizan para organizar los elementos de una lista en un orden específico, como numérico, alfabético, u otro criterio definido. </value>
+  </data>
+  <data name="label24.Text" xml:space="preserve">
+    <value>Un algoritmo de ordenamiento es un conjunto de instrucciones o reglas definidas que se utilizan para organizar los elementos de una lista en un orden específico, como numérico, alfabético, u otro criterio definido. </value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>VisualSort es un programa que muestra cómo funcionan los algoritmos de ordenamiento más populares de manera visual. También ayuda a comprender como funcionan los algoritmos de ordenamiento y te mostrara el código de cada algoritmo en varios lenguajes de programación para que lo puedas aplicar en tus programas.
+</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>VisualSort es un programa que muestra cómo funcionan los algoritmos de ordenamiento más populares de manera visual. También ayuda a comprender como funcionan los algoritmos de ordenamiento y te mostrara el código de cada algoritmo en varios lenguajes de programación para que lo puedas aplicar en tus programas.
 </value>
   </data>
 </root>
