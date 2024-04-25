@@ -51,6 +51,9 @@ namespace visualizador_de_algoritmos
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
+            //
+            OpenChildForm(new frmVisualizar());
         }
         //
         //Metodos
@@ -134,11 +137,6 @@ namespace visualizador_de_algoritmos
         //Eventos
         //
         #region Botones de los Formularios
-        private void BtnVisualizar_Click(object sender, EventArgs e)
-        {
-            BotonActivado(sender, RGBColors.verde);
-            OpenChildForm(new frmVisualizar());
-        }
         private void BtnInfo_Click(object sender, EventArgs e)
         {
             BotonActivado(sender, RGBColors.amarillo);
@@ -158,6 +156,7 @@ namespace visualizador_de_algoritmos
         {
             currentChildForm?.Close();//Si el formulario no es null lo cierra   
             Reset();
+            OpenChildForm(new frmVisualizar());
         }
         private void BtnMaximizar_MouseHover(object sender, EventArgs e)
         {

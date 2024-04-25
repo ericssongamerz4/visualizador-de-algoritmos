@@ -33,7 +33,6 @@
             this.btnAcercaDe = new FontAwesome.Sharp.IconButton();
             this.btnCodigo = new FontAwesome.Sharp.IconButton();
             this.btnInfo = new FontAwesome.Sharp.IconButton();
-            this.btnVisualizar = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbInicio = new System.Windows.Forms.PictureBox();
             this.panelBarraTitulo = new System.Windows.Forms.Panel();
@@ -60,7 +59,6 @@
             this.panelMenu.Controls.Add(this.btnAcercaDe);
             this.panelMenu.Controls.Add(this.btnCodigo);
             this.panelMenu.Controls.Add(this.btnInfo);
-            this.panelMenu.Controls.Add(this.btnVisualizar);
             this.panelMenu.Controls.Add(this.panel1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -105,11 +103,11 @@
             this.btnCodigo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCodigo.IconSize = 40;
             this.btnCodigo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCodigo.Location = new System.Drawing.Point(0, 280);
+            this.btnCodigo.Location = new System.Drawing.Point(0, 275);
             this.btnCodigo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCodigo.Name = "btnCodigo";
             this.btnCodigo.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnCodigo.Size = new System.Drawing.Size(250, 70);
+            this.btnCodigo.Size = new System.Drawing.Size(250, 100);
             this.btnCodigo.TabIndex = 4;
             this.btnCodigo.Text = "Código";
             this.btnCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -129,41 +127,17 @@
             this.btnInfo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInfo.IconSize = 40;
             this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInfo.Location = new System.Drawing.Point(0, 210);
+            this.btnInfo.Location = new System.Drawing.Point(0, 175);
             this.btnInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnInfo.Size = new System.Drawing.Size(250, 70);
+            this.btnInfo.Size = new System.Drawing.Size(250, 100);
             this.btnInfo.TabIndex = 3;
             this.btnInfo.Text = "Información";
             this.btnInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInfo.UseVisualStyleBackColor = true;
             this.btnInfo.Click += new System.EventHandler(this.BtnInfo_Click);
-            // 
-            // btnVisualizar
-            // 
-            this.btnVisualizar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVisualizar.FlatAppearance.BorderSize = 0;
-            this.btnVisualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizar.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
-            this.btnVisualizar.IconChar = FontAwesome.Sharp.IconChar.ChartColumn;
-            this.btnVisualizar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
-            this.btnVisualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnVisualizar.IconSize = 40;
-            this.btnVisualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVisualizar.Location = new System.Drawing.Point(0, 140);
-            this.btnVisualizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnVisualizar.Name = "btnVisualizar";
-            this.btnVisualizar.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnVisualizar.Size = new System.Drawing.Size(250, 70);
-            this.btnVisualizar.TabIndex = 2;
-            this.btnVisualizar.Text = "Visualizar";
-            this.btnVisualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVisualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnVisualizar.UseVisualStyleBackColor = true;
-            this.btnVisualizar.Click += new System.EventHandler(this.BtnVisualizar_Click);
             // 
             // panel1
             // 
@@ -173,7 +147,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 140);
+            this.panel1.Size = new System.Drawing.Size(250, 175);
             this.panel1.TabIndex = 1;
             // 
             // pbInicio
@@ -183,7 +157,7 @@
             this.pbInicio.Location = new System.Drawing.Point(0, 0);
             this.pbInicio.Name = "pbInicio";
             this.pbInicio.Padding = new System.Windows.Forms.Padding(10);
-            this.pbInicio.Size = new System.Drawing.Size(250, 140);
+            this.pbInicio.Size = new System.Drawing.Size(250, 175);
             this.pbInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbInicio.TabIndex = 0;
             this.pbInicio.TabStop = false;
@@ -317,7 +291,6 @@
 
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton btnVisualizar;
         private FontAwesome.Sharp.IconButton btnAcercaDe;
         private FontAwesome.Sharp.IconButton btnCodigo;
         private FontAwesome.Sharp.IconButton btnInfo;
