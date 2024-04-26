@@ -130,22 +130,17 @@
   <data name="label3.Text" xml:space="preserve">
     <value>Un algoritmo de ordenamiento es un conjunto de instrucciones o reglas definidas que se utilizan para organizar los elementos de una lista en un orden específico, como numérico, alfabético, u otro criterio definido. </value>
   </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>VisualSort es un programa que muestra cómo funcionan los algoritmos de ordenamiento más populares de manera visual. También ayuda a comprender como funcionan los algoritmos de ordenamiento y te mostrara el código de cada algoritmo en varios lenguajes de programación para que lo puedas aplicar en tus programas.
+  <data name="label9.Text" xml:space="preserve">
+    <value>Para la segunda posición, donde está presente 25, nuevamente recorremos el resto del array de manera secuencial.
+Después de recorrer, encontramos que 12 es el segundo valor más bajo en el array y debería aparecer en el segundo lugar en el array, por lo que intercambiamos estos valores.
 </value>
   </data>
-  <data name="label22.Text" xml:space="preserve">
-    <value>Un algoritmo de ordenamiento es un conjunto de instrucciones o reglas definidas que se utilizan para organizar los elementos de una lista en un orden específico, como numérico, alfabético, u otro criterio definido. </value>
+  <data name="label19.Text" xml:space="preserve">
+    <value>Selection sort es un algoritmo de ordenamiento simple y eficiente que funciona seleccionando repetidamente el elemento más pequeño (o más grande) de la parte no ordenada de la lista y moviéndolo a la parte ordenada de la lista.</value>
   </data>
-  <data name="label24.Text" xml:space="preserve">
-    <value>Un algoritmo de ordenamiento es un conjunto de instrucciones o reglas definidas que se utilizan para organizar los elementos de una lista en un orden específico, como numérico, alfabético, u otro criterio definido. </value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>VisualSort es un programa que muestra cómo funcionan los algoritmos de ordenamiento más populares de manera visual. También ayuda a comprender como funcionan los algoritmos de ordenamiento y te mostrara el código de cada algoritmo en varios lenguajes de programación para que lo puedas aplicar en tus programas.
-</value>
-  </data>
-  <data name="label11.Text" xml:space="preserve">
-    <value>VisualSort es un programa que muestra cómo funcionan los algoritmos de ordenamiento más populares de manera visual. También ayuda a comprender como funcionan los algoritmos de ordenamiento y te mostrara el código de cada algoritmo en varios lenguajes de programación para que lo puedas aplicar en tus programas.
+  <data name="label26.Text" xml:space="preserve">
+    <value>Para la primera posición en el array ordenado, se recorre todo el array desde el índice 0 hasta el 4 secuencialmente. La primera posición donde se encuentra 64 actualmente, después de recorrer todo el array, está claro que 11 es el valor más bajo.
+Por lo tanto, se reemplaza 64 con 11. Después de una iteración, 11, que resulta ser el valor más pequeño en el array, tiende a aparecer en la primera posición de la lista ordenada.
 </value>
   </data>
 </root>
