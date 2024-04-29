@@ -208,7 +208,7 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "¿Qué es VisualSort?";
             // 
-            // frmAcercaDe
+            // FrmAcercaDe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -218,8 +218,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmAcercaDe";
-            this.Text = "Ajustes";
+            this.Name = "FrmAcercaDe";
+            this.Text = "Acerca Del Proyecto";
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnGitHub)).EndInit();

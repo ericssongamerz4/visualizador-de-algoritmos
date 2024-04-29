@@ -65,7 +65,7 @@
             this.panelContenido.Location = new System.Drawing.Point(0, 0);
             this.panelContenido.Name = "panelContenido";
             this.panelContenido.Padding = new System.Windows.Forms.Padding(15);
-            this.panelContenido.Size = new System.Drawing.Size(800, 500);
+            this.panelContenido.Size = new System.Drawing.Size(922, 559);
             this.panelContenido.TabIndex = 6;
             // 
             // btnCopiarCodigo
@@ -79,7 +79,7 @@
             this.btnCopiarCodigo.IconColor = System.Drawing.Color.Black;
             this.btnCopiarCodigo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCopiarCodigo.IconSize = 40;
-            this.btnCopiarCodigo.Location = new System.Drawing.Point(744, 95);
+            this.btnCopiarCodigo.Location = new System.Drawing.Point(866, 95);
             this.btnCopiarCodigo.Name = "btnCopiarCodigo";
             this.btnCopiarCodigo.Size = new System.Drawing.Size(40, 40);
             this.btnCopiarCodigo.TabIndex = 2;
@@ -96,7 +96,7 @@
             this.panel3.Location = new System.Drawing.Point(15, 15);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.panel3.Size = new System.Drawing.Size(770, 470);
+            this.panel3.Size = new System.Drawing.Size(892, 529);
             this.panel3.TabIndex = 5;
             // 
             // panel2
@@ -107,7 +107,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 69);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(770, 401);
+            this.panel2.Size = new System.Drawing.Size(892, 460);
             this.panel2.TabIndex = 10;
             // 
             // panel4
@@ -117,7 +117,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 10);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(770, 391);
+            this.panel4.Size = new System.Drawing.Size(892, 450);
             this.panel4.TabIndex = 0;
             // 
             // tbLenguajesDeProgramacion
@@ -130,17 +130,18 @@
             this.tbLenguajesDeProgramacion.Location = new System.Drawing.Point(0, 0);
             this.tbLenguajesDeProgramacion.Name = "tbLenguajesDeProgramacion";
             this.tbLenguajesDeProgramacion.SelectedIndex = 0;
-            this.tbLenguajesDeProgramacion.Size = new System.Drawing.Size(770, 391);
+            this.tbLenguajesDeProgramacion.Size = new System.Drawing.Size(892, 450);
             this.tbLenguajesDeProgramacion.TabIndex = 0;
             // 
             // tabPageCSharp
             // 
             this.tabPageCSharp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.tabPageCSharp.Controls.Add(this.txtCodigoCSharp);
+            this.tabPageCSharp.Font = new System.Drawing.Font("Segoe UI Black", 20F, System.Drawing.FontStyle.Bold);
             this.tabPageCSharp.Location = new System.Drawing.Point(4, 57);
             this.tabPageCSharp.Name = "tabPageCSharp";
             this.tabPageCSharp.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCSharp.Size = new System.Drawing.Size(762, 330);
+            this.tabPageCSharp.Size = new System.Drawing.Size(884, 389);
             this.tabPageCSharp.TabIndex = 0;
             this.tabPageCSharp.Text = "C#";
             // 
@@ -149,12 +150,12 @@
             this.txtCodigoCSharp.BackColor = System.Drawing.Color.Black;
             this.txtCodigoCSharp.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigoCSharp.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtCodigoCSharp.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtCodigoCSharp.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.txtCodigoCSharp.ForeColor = System.Drawing.Color.Cyan;
             this.txtCodigoCSharp.Location = new System.Drawing.Point(3, 3);
             this.txtCodigoCSharp.Name = "txtCodigoCSharp";
             this.txtCodigoCSharp.ReadOnly = true;
-            this.txtCodigoCSharp.Size = new System.Drawing.Size(756, 324);
+            this.txtCodigoCSharp.Size = new System.Drawing.Size(878, 383);
             this.txtCodigoCSharp.TabIndex = 1;
             this.txtCodigoCSharp.Text = "";
             // 
@@ -165,7 +166,7 @@
             this.tabPageJavascript.Location = new System.Drawing.Point(4, 57);
             this.tabPageJavascript.Name = "tabPageJavascript";
             this.tabPageJavascript.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageJavascript.Size = new System.Drawing.Size(762, 330);
+            this.tabPageJavascript.Size = new System.Drawing.Size(884, 389);
             this.tabPageJavascript.TabIndex = 1;
             this.tabPageJavascript.Text = "Javascript";
             // 
@@ -174,12 +175,12 @@
             this.txtCodigoJavascript.BackColor = System.Drawing.Color.Black;
             this.txtCodigoJavascript.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigoJavascript.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtCodigoJavascript.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoJavascript.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.txtCodigoJavascript.ForeColor = System.Drawing.Color.Lime;
             this.txtCodigoJavascript.Location = new System.Drawing.Point(3, 3);
             this.txtCodigoJavascript.Name = "txtCodigoJavascript";
             this.txtCodigoJavascript.ReadOnly = true;
-            this.txtCodigoJavascript.Size = new System.Drawing.Size(756, 324);
+            this.txtCodigoJavascript.Size = new System.Drawing.Size(878, 383);
             this.txtCodigoJavascript.TabIndex = 0;
             this.txtCodigoJavascript.Text = "";
             // 
@@ -191,7 +192,7 @@
             this.tabPagePython.Location = new System.Drawing.Point(4, 57);
             this.tabPagePython.Name = "tabPagePython";
             this.tabPagePython.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePython.Size = new System.Drawing.Size(762, 330);
+            this.tabPagePython.Size = new System.Drawing.Size(884, 389);
             this.tabPagePython.TabIndex = 2;
             this.tabPagePython.Text = "Python";
             // 
@@ -200,12 +201,12 @@
             this.txtCodigoPython.BackColor = System.Drawing.Color.Black;
             this.txtCodigoPython.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigoPython.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtCodigoPython.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoPython.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.txtCodigoPython.ForeColor = System.Drawing.Color.Yellow;
             this.txtCodigoPython.Location = new System.Drawing.Point(3, 3);
             this.txtCodigoPython.Name = "txtCodigoPython";
             this.txtCodigoPython.ReadOnly = true;
-            this.txtCodigoPython.Size = new System.Drawing.Size(756, 324);
+            this.txtCodigoPython.Size = new System.Drawing.Size(878, 383);
             this.txtCodigoPython.TabIndex = 1;
             this.txtCodigoPython.Text = "";
             // 
@@ -216,7 +217,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 10);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(770, 59);
+            this.panel1.Size = new System.Drawing.Size(892, 59);
             this.panel1.TabIndex = 9;
             // 
             // cmbAlgoritmo
@@ -224,14 +225,17 @@
             this.cmbAlgoritmo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbAlgoritmo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.cmbAlgoritmo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAlgoritmo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbAlgoritmo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAlgoritmo.ForeColor = System.Drawing.Color.Black;
             this.cmbAlgoritmo.FormattingEnabled = true;
             this.cmbAlgoritmo.Items.AddRange(new object[] {
             "Bubble sort",
             "Quick sort"});
             this.cmbAlgoritmo.Location = new System.Drawing.Point(194, 6);
             this.cmbAlgoritmo.Name = "cmbAlgoritmo";
-            this.cmbAlgoritmo.Size = new System.Drawing.Size(566, 46);
+            this.cmbAlgoritmo.Size = new System.Drawing.Size(688, 46);
             this.cmbAlgoritmo.TabIndex = 5;
             this.cmbAlgoritmo.SelectedIndexChanged += new System.EventHandler(this.CmbAlgoritmo_SelectedIndexChanged);
             // 
@@ -254,7 +258,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.ClientSize = new System.Drawing.Size(800, 500);
+            this.ClientSize = new System.Drawing.Size(922, 559);
             this.Controls.Add(this.panelContenido);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCodigo";
@@ -277,7 +281,6 @@
 
         private System.Windows.Forms.Panel panelContenido;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ComboBox cmbAlgoritmo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
@@ -292,5 +295,6 @@
         private System.Windows.Forms.RichTextBox txtCodigoPython;
         private FontAwesome.Sharp.IconButton btnCopiarCodigo;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ComboBox cmbAlgoritmo;
     }
 }

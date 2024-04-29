@@ -42,7 +42,7 @@ namespace visualizador_de_algoritmos
 
             leftBorderBtn = new Panel
             {
-                Size = new Size(7, 70)
+                Size = new Size(7, 100)
             };
             panelMenu.Controls.Add(leftBorderBtn);
 

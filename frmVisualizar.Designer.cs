@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelContenido = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -69,7 +69,7 @@
             this.panelContenido.Location = new System.Drawing.Point(0, 0);
             this.panelContenido.Name = "panelContenido";
             this.panelContenido.Padding = new System.Windows.Forms.Padding(15);
-            this.panelContenido.Size = new System.Drawing.Size(800, 500);
+            this.panelContenido.Size = new System.Drawing.Size(922, 559);
             this.panelContenido.TabIndex = 4;
             // 
             // panel3
@@ -80,7 +80,7 @@
             this.panel3.Location = new System.Drawing.Point(15, 79);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.panel3.Size = new System.Drawing.Size(770, 406);
+            this.panel3.Size = new System.Drawing.Size(892, 465);
             this.panel3.TabIndex = 5;
             // 
             // chart
@@ -88,9 +88,9 @@
             this.chart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.chart.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.chart.BorderSkin.PageColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            chartArea3.Name = "ChartArea1";
-            this.chart.ChartAreas.Add(chartArea3);
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            chartArea1.Name = "ChartArea1";
+            this.chart.ChartAreas.Add(chartArea1);
             this.chart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chart.Location = new System.Drawing.Point(0, 10);
             this.chart.Name = "chart";
@@ -99,10 +99,10 @@
             this.chart.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))))};
             this.chart.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series3.ChartArea = "ChartArea1";
-            series3.Name = "Series1";
-            this.chart.Series.Add(series3);
-            this.chart.Size = new System.Drawing.Size(770, 304);
+            series1.ChartArea = "ChartArea1";
+            series1.Name = "Series1";
+            this.chart.Series.Add(series1);
+            this.chart.Size = new System.Drawing.Size(892, 363);
             this.chart.TabIndex = 2;
             this.chart.Text = "chart1";
             // 
@@ -110,10 +110,10 @@
             // 
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 314);
+            this.panel2.Location = new System.Drawing.Point(0, 373);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(770, 92);
+            this.panel2.Size = new System.Drawing.Size(892, 92);
             this.panel2.TabIndex = 1;
             // 
             // panel4
@@ -129,7 +129,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 10);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(770, 82);
+            this.panel4.Size = new System.Drawing.Size(892, 82);
             this.panel4.TabIndex = 0;
             // 
             // lblVelocidad
@@ -137,7 +137,7 @@
             this.lblVelocidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVelocidad.AutoSize = true;
             this.lblVelocidad.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.lblVelocidad.Location = new System.Drawing.Point(348, 17);
+            this.lblVelocidad.Location = new System.Drawing.Point(470, 17);
             this.lblVelocidad.Name = "lblVelocidad";
             this.lblVelocidad.Size = new System.Drawing.Size(45, 38);
             this.lblVelocidad.TabIndex = 10;
@@ -162,7 +162,7 @@
             this.tbVelocidad.Location = new System.Drawing.Point(168, 24);
             this.tbVelocidad.Maximum = 5;
             this.tbVelocidad.Name = "tbVelocidad";
-            this.tbVelocidad.Size = new System.Drawing.Size(173, 69);
+            this.tbVelocidad.Size = new System.Drawing.Size(295, 69);
             this.tbVelocidad.TabIndex = 5;
             this.tbVelocidad.TickStyle = System.Windows.Forms.TickStyle.None;
             this.tbVelocidad.Value = 1;
@@ -178,7 +178,7 @@
             this.btnBarajear.IconChar = FontAwesome.Sharp.IconChar.Random;
             this.btnBarajear.IconColor = System.Drawing.Color.Black;
             this.btnBarajear.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBarajear.Location = new System.Drawing.Point(432, 12);
+            this.btnBarajear.Location = new System.Drawing.Point(554, 12);
             this.btnBarajear.Name = "btnBarajear";
             this.btnBarajear.Size = new System.Drawing.Size(60, 60);
             this.btnBarajear.TabIndex = 6;
@@ -196,7 +196,7 @@
             this.btnFinal.IconChar = FontAwesome.Sharp.IconChar.ForwardStep;
             this.btnFinal.IconColor = System.Drawing.Color.Black;
             this.btnFinal.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFinal.Location = new System.Drawing.Point(660, 12);
+            this.btnFinal.Location = new System.Drawing.Point(782, 12);
             this.btnFinal.Name = "btnFinal";
             this.btnFinal.Size = new System.Drawing.Size(60, 60);
             this.btnFinal.TabIndex = 5;
@@ -214,7 +214,7 @@
             this.btnReproducir.IconChar = FontAwesome.Sharp.IconChar.Play;
             this.btnReproducir.IconColor = System.Drawing.Color.Black;
             this.btnReproducir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnReproducir.Location = new System.Drawing.Point(585, 11);
+            this.btnReproducir.Location = new System.Drawing.Point(707, 11);
             this.btnReproducir.Name = "btnReproducir";
             this.btnReproducir.Size = new System.Drawing.Size(60, 60);
             this.btnReproducir.TabIndex = 4;
@@ -232,7 +232,7 @@
             this.btnInicio.IconChar = FontAwesome.Sharp.IconChar.BackwardStep;
             this.btnInicio.IconColor = System.Drawing.Color.Black;
             this.btnInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnInicio.Location = new System.Drawing.Point(508, 11);
+            this.btnInicio.Location = new System.Drawing.Point(630, 11);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(60, 60);
             this.btnInicio.TabIndex = 2;
@@ -252,7 +252,7 @@
             this.panel1.Location = new System.Drawing.Point(15, 15);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(770, 64);
+            this.panel1.Size = new System.Drawing.Size(892, 64);
             this.panel1.TabIndex = 2;
             // 
             // lblElementos
@@ -260,7 +260,7 @@
             this.lblElementos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblElementos.AutoSize = true;
             this.lblElementos.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.lblElementos.Location = new System.Drawing.Point(334, 13);
+            this.lblElementos.Location = new System.Drawing.Point(456, 13);
             this.lblElementos.Name = "lblElementos";
             this.lblElementos.Size = new System.Drawing.Size(47, 38);
             this.lblElementos.TabIndex = 13;
@@ -282,9 +282,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbNumeroDeElementos.Location = new System.Drawing.Point(168, 20);
             this.tbNumeroDeElementos.Maximum = 100;
-            this.tbNumeroDeElementos.Minimum = 10;
+            this.tbNumeroDeElementos.Minimum = 5;
             this.tbNumeroDeElementos.Name = "tbNumeroDeElementos";
-            this.tbNumeroDeElementos.Size = new System.Drawing.Size(173, 69);
+            this.tbNumeroDeElementos.Size = new System.Drawing.Size(295, 69);
             this.tbNumeroDeElementos.TabIndex = 11;
             this.tbNumeroDeElementos.TickStyle = System.Windows.Forms.TickStyle.None;
             this.toolTip.SetToolTip(this.tbNumeroDeElementos, "Numero de Elementos");
@@ -298,7 +298,7 @@
             this.cmbAlgoritmo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbAlgoritmo.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cmbAlgoritmo.FormattingEnabled = true;
-            this.cmbAlgoritmo.Location = new System.Drawing.Point(561, 18);
+            this.cmbAlgoritmo.Location = new System.Drawing.Point(683, 18);
             this.cmbAlgoritmo.Name = "cmbAlgoritmo";
             this.cmbAlgoritmo.Size = new System.Drawing.Size(193, 40);
             this.cmbAlgoritmo.TabIndex = 2;
@@ -309,7 +309,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Black", 14F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(387, 16);
+            this.label1.Location = new System.Drawing.Point(509, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(170, 38);
             this.label1.TabIndex = 3;
@@ -325,7 +325,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.ClientSize = new System.Drawing.Size(800, 500);
+            this.ClientSize = new System.Drawing.Size(922, 559);
             this.Controls.Add(this.panelContenido);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmVisualizar";

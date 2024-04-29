@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnAcercaDe = new FontAwesome.Sharp.IconButton();
-            this.btnCodigo = new FontAwesome.Sharp.IconButton();
-            this.btnInfo = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbInicio = new System.Windows.Forms.PictureBox();
             this.panelBarraTitulo = new System.Windows.Forms.Panel();
@@ -43,6 +41,8 @@
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnInfo = new FontAwesome.Sharp.IconButton();
+            this.btnCodigo = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).BeginInit();
@@ -90,54 +90,6 @@
             this.btnAcercaDe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAcercaDe.UseVisualStyleBackColor = true;
             this.btnAcercaDe.Click += new System.EventHandler(this.BtnAcercaDe_Click);
-            // 
-            // btnCodigo
-            // 
-            this.btnCodigo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCodigo.FlatAppearance.BorderSize = 0;
-            this.btnCodigo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCodigo.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
-            this.btnCodigo.IconChar = FontAwesome.Sharp.IconChar.LaptopCode;
-            this.btnCodigo.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
-            this.btnCodigo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCodigo.IconSize = 40;
-            this.btnCodigo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCodigo.Location = new System.Drawing.Point(0, 275);
-            this.btnCodigo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnCodigo.Name = "btnCodigo";
-            this.btnCodigo.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnCodigo.Size = new System.Drawing.Size(250, 100);
-            this.btnCodigo.TabIndex = 4;
-            this.btnCodigo.Text = "Código";
-            this.btnCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCodigo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCodigo.UseVisualStyleBackColor = true;
-            this.btnCodigo.Click += new System.EventHandler(this.BtnCodigo_Click);
-            // 
-            // btnInfo
-            // 
-            this.btnInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInfo.FlatAppearance.BorderSize = 0;
-            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInfo.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
-            this.btnInfo.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
-            this.btnInfo.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
-            this.btnInfo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnInfo.IconSize = 40;
-            this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInfo.Location = new System.Drawing.Point(0, 175);
-            this.btnInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnInfo.Size = new System.Drawing.Size(250, 100);
-            this.btnInfo.TabIndex = 3;
-            this.btnInfo.Text = "Información";
-            this.btnInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInfo.UseVisualStyleBackColor = true;
-            this.btnInfo.Click += new System.EventHandler(this.BtnInfo_Click);
             // 
             // panel1
             // 
@@ -264,6 +216,54 @@
             this.panelDesktop.Size = new System.Drawing.Size(922, 559);
             this.panelDesktop.TabIndex = 3;
             // 
+            // btnInfo
+            // 
+            this.btnInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInfo.FlatAppearance.BorderSize = 0;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
+            this.btnInfo.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
+            this.btnInfo.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
+            this.btnInfo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnInfo.IconSize = 40;
+            this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInfo.Location = new System.Drawing.Point(0, 175);
+            this.btnInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnInfo.Size = new System.Drawing.Size(250, 100);
+            this.btnInfo.TabIndex = 3;
+            this.btnInfo.Text = "Información";
+            this.btnInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.BtnInfo_Click);
+            // 
+            // btnCodigo
+            // 
+            this.btnCodigo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCodigo.FlatAppearance.BorderSize = 0;
+            this.btnCodigo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCodigo.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
+            this.btnCodigo.IconChar = FontAwesome.Sharp.IconChar.LaptopCode;
+            this.btnCodigo.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(252)))), ((int)(((byte)(247)))));
+            this.btnCodigo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCodigo.IconSize = 40;
+            this.btnCodigo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCodigo.Location = new System.Drawing.Point(0, 275);
+            this.btnCodigo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCodigo.Name = "btnCodigo";
+            this.btnCodigo.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnCodigo.Size = new System.Drawing.Size(250, 100);
+            this.btnCodigo.TabIndex = 4;
+            this.btnCodigo.Text = "Código";
+            this.btnCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCodigo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCodigo.UseVisualStyleBackColor = true;
+            this.btnCodigo.Click += new System.EventHandler(this.BtnCodigo_Click);
+            // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -292,8 +292,6 @@
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnAcercaDe;
-        private FontAwesome.Sharp.IconButton btnCodigo;
-        private FontAwesome.Sharp.IconButton btnInfo;
         private System.Windows.Forms.Panel panelBarraTitulo;
         private System.Windows.Forms.Panel panelDesktop;
         private System.Windows.Forms.PictureBox pbInicio;
@@ -303,6 +301,8 @@
         private FontAwesome.Sharp.IconPictureBox btnMaximizar;
         private FontAwesome.Sharp.IconPictureBox btnMinimizar;
         private System.Windows.Forms.ToolTip toolTip1;
+        private FontAwesome.Sharp.IconButton btnInfo;
+        private FontAwesome.Sharp.IconButton btnCodigo;
     }
 }
 
