@@ -77,6 +77,9 @@
     <Content Include="algoritmos.s3db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Compile Include="frmVisualizarMetodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmAcercaDe.cs">
       <SubType>Form</SubType>
     </Compile>

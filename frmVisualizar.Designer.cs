@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelContenido = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnReproducir = new FontAwesome.Sharp.IconButton();
+            this.btnDetener = new FontAwesome.Sharp.IconButton();
             this.lblVelocidad = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbVelocidad = new System.Windows.Forms.TrackBar();
             this.btnBarajear = new FontAwesome.Sharp.IconButton();
-            this.btnFinal = new FontAwesome.Sharp.IconButton();
-            this.btnReproducir = new FontAwesome.Sharp.IconButton();
             this.btnInicio = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblElementos = new System.Windows.Forms.Label();
@@ -50,7 +50,6 @@
             this.cmbAlgoritmo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.timer = new System.Windows.Forms.Timer(this.components);
             this.panelContenido.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
@@ -88,9 +87,9 @@
             this.chart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.chart.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.chart.BorderSkin.PageColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            chartArea1.Name = "ChartArea1";
-            this.chart.ChartAreas.Add(chartArea1);
+            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            chartArea3.Name = "ChartArea1";
+            this.chart.ChartAreas.Add(chartArea3);
             this.chart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chart.Location = new System.Drawing.Point(0, 10);
             this.chart.Name = "chart";
@@ -99,9 +98,9 @@
             this.chart.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))))};
             this.chart.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series1.ChartArea = "ChartArea1";
-            series1.Name = "Series1";
-            this.chart.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.Name = "Series1";
+            this.chart.Series.Add(series3);
             this.chart.Size = new System.Drawing.Size(892, 363);
             this.chart.TabIndex = 2;
             this.chart.Text = "chart1";
@@ -119,18 +118,53 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.panel4.Controls.Add(this.btnReproducir);
+            this.panel4.Controls.Add(this.btnDetener);
             this.panel4.Controls.Add(this.lblVelocidad);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.tbVelocidad);
             this.panel4.Controls.Add(this.btnBarajear);
-            this.panel4.Controls.Add(this.btnFinal);
-            this.panel4.Controls.Add(this.btnReproducir);
             this.panel4.Controls.Add(this.btnInicio);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 10);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(892, 82);
             this.panel4.TabIndex = 0;
+            // 
+            // btnReproducir
+            // 
+            this.btnReproducir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReproducir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
+            this.btnReproducir.Enabled = false;
+            this.btnReproducir.FlatAppearance.BorderSize = 0;
+            this.btnReproducir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReproducir.IconChar = FontAwesome.Sharp.IconChar.Play;
+            this.btnReproducir.IconColor = System.Drawing.Color.Black;
+            this.btnReproducir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnReproducir.Location = new System.Drawing.Point(707, 12);
+            this.btnReproducir.Name = "btnReproducir";
+            this.btnReproducir.Size = new System.Drawing.Size(60, 60);
+            this.btnReproducir.TabIndex = 4;
+            this.toolTip.SetToolTip(this.btnReproducir, "Reproducir");
+            this.btnReproducir.UseVisualStyleBackColor = false;
+            this.btnReproducir.Click += new System.EventHandler(this.BtnReproducir_Click);
+            // 
+            // btnDetener
+            // 
+            this.btnDetener.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDetener.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
+            this.btnDetener.FlatAppearance.BorderSize = 0;
+            this.btnDetener.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetener.IconChar = FontAwesome.Sharp.IconChar.Stop;
+            this.btnDetener.IconColor = System.Drawing.Color.Black;
+            this.btnDetener.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDetener.Location = new System.Drawing.Point(707, 12);
+            this.btnDetener.Name = "btnDetener";
+            this.btnDetener.Size = new System.Drawing.Size(60, 60);
+            this.btnDetener.TabIndex = 11;
+            this.toolTip.SetToolTip(this.btnDetener, "Reproducir");
+            this.btnDetener.UseVisualStyleBackColor = false;
+            this.btnDetener.Click += new System.EventHandler(this.btnDetener_Click);
             // 
             // lblVelocidad
             // 
@@ -185,42 +219,6 @@
             this.toolTip.SetToolTip(this.btnBarajear, "Barajear");
             this.btnBarajear.UseVisualStyleBackColor = false;
             this.btnBarajear.Click += new System.EventHandler(this.BtnBarajear_Click);
-            // 
-            // btnFinal
-            // 
-            this.btnFinal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFinal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
-            this.btnFinal.Enabled = false;
-            this.btnFinal.FlatAppearance.BorderSize = 0;
-            this.btnFinal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinal.IconChar = FontAwesome.Sharp.IconChar.ForwardStep;
-            this.btnFinal.IconColor = System.Drawing.Color.Black;
-            this.btnFinal.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFinal.Location = new System.Drawing.Point(782, 12);
-            this.btnFinal.Name = "btnFinal";
-            this.btnFinal.Size = new System.Drawing.Size(60, 60);
-            this.btnFinal.TabIndex = 5;
-            this.toolTip.SetToolTip(this.btnFinal, "Ir al Final");
-            this.btnFinal.UseVisualStyleBackColor = false;
-            this.btnFinal.Click += new System.EventHandler(this.BtnFinal_Click);
-            // 
-            // btnReproducir
-            // 
-            this.btnReproducir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReproducir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
-            this.btnReproducir.Enabled = false;
-            this.btnReproducir.FlatAppearance.BorderSize = 0;
-            this.btnReproducir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReproducir.IconChar = FontAwesome.Sharp.IconChar.Play;
-            this.btnReproducir.IconColor = System.Drawing.Color.Black;
-            this.btnReproducir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnReproducir.Location = new System.Drawing.Point(707, 11);
-            this.btnReproducir.Name = "btnReproducir";
-            this.btnReproducir.Size = new System.Drawing.Size(60, 60);
-            this.btnReproducir.TabIndex = 4;
-            this.toolTip.SetToolTip(this.btnReproducir, "Reproducir");
-            this.btnReproducir.UseVisualStyleBackColor = false;
-            this.btnReproducir.Click += new System.EventHandler(this.BtnReproducir_Click);
             // 
             // btnInicio
             // 
@@ -295,7 +293,7 @@
             // 
             this.cmbAlgoritmo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbAlgoritmo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.cmbAlgoritmo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbAlgoritmo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAlgoritmo.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cmbAlgoritmo.FormattingEnabled = true;
             this.cmbAlgoritmo.Location = new System.Drawing.Point(683, 18);
@@ -314,11 +312,6 @@
             this.label1.Size = new System.Drawing.Size(170, 38);
             this.label1.TabIndex = 3;
             this.label1.Text = "Algoritmo:";
-            // 
-            // timer
-            // 
-            this.timer.Interval = 1000;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // frmVisualizar
             // 
@@ -356,7 +349,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TrackBar tbVelocidad;
         private FontAwesome.Sharp.IconButton btnBarajear;
-        private FontAwesome.Sharp.IconButton btnFinal;
         private FontAwesome.Sharp.IconButton btnReproducir;
         private FontAwesome.Sharp.IconButton btnInicio;
         private System.Windows.Forms.Label lblVelocidad;
@@ -364,6 +356,6 @@
         private System.Windows.Forms.Label lblElementos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TrackBar tbNumeroDeElementos;
-        private System.Windows.Forms.Timer timer;
+        private FontAwesome.Sharp.IconButton btnDetener;
     }
 }
