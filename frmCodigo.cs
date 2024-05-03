@@ -12,7 +12,7 @@ namespace visualizador_de_algoritmos
         public frmCodigo()
         {
             InitializeComponent();
-            MostrarAlgoritmosDisponibles(cmbAlgoritmo);
+            MostrarAlgoritmosDisponibles(cmbAlgoritmo);//Muestra los algoritmos disponibles en el combobox
         }
 
         #region Metodos

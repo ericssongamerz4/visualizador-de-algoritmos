@@ -226,8 +226,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbAlgoritmo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.cmbAlgoritmo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAlgoritmo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbAlgoritmo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAlgoritmo.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.cmbAlgoritmo.ForeColor = System.Drawing.Color.Black;
             this.cmbAlgoritmo.FormattingEnabled = true;
             this.cmbAlgoritmo.Items.AddRange(new object[] {
@@ -235,7 +234,7 @@
             "Quick sort"});
             this.cmbAlgoritmo.Location = new System.Drawing.Point(194, 6);
             this.cmbAlgoritmo.Name = "cmbAlgoritmo";
-            this.cmbAlgoritmo.Size = new System.Drawing.Size(688, 46);
+            this.cmbAlgoritmo.Size = new System.Drawing.Size(688, 53);
             this.cmbAlgoritmo.TabIndex = 5;
             this.cmbAlgoritmo.SelectedIndexChanged += new System.EventHandler(this.CmbAlgoritmo_SelectedIndexChanged);
             // 
