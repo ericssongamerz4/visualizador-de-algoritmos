@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Algoritmos de ordenamiento</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+
+  <body>
+    <h1 class="titulo" id="Inicio">Algoritmos de ordenamiento</h1>
+    <!--Que es? -->
+    <h1>¿Qué es un algoritmo de ordenamiento?</h1>
+    <p>
+      Un algoritmo de ordenamiento es un conjunto de instrucciones o reglas
+      definidas que se utilizan para organizar los elementos de una lista en un
+      orden específico, como numérico, alfabético, u otro criterio definido.
+    </p>
+
+    <!--porque son importantes? -->
+    <h1>¿Por qué son importantes los algoritmos de ordenamiento?</h1>
+    <p>
+      Dado que a menudo pueden reducir la complejidad de un problema, los
+      algoritmos de ordenamiento son muy importantes en informática. Estos
+      algoritmos tienen aplicaciones directas en algoritmos de búsqueda,
+      algoritmos de bases de datos, métodos divide y vencerás, algoritmos de
+      estructura de datos y muchos más.
+    </p>
+
+    <h1>Características de los algoritmos de ordenamiento</h1>
+    <ul>
+      <li>
+        <strong>Complejidad temporal: </strong>Es una medida de cuánto tiempo
+        lleva ejecutar un algoritmo, se utiliza para categorizar los algoritmos
+        de ordenamiento. El rendimiento en el peor de los casos, el caso
+        promedio y el mejor de los casos de un algoritmo de ordenamiento se
+        puede utilizar para cuantificar la complejidad temporal del proceso.
+      </li>
+      <br />
+      <li>
+        <strong>Complejidad espacial: </strong>Los algoritmos de ordenamiento
+        también tienen complejidad espacial, que es la cantidad de memoria
+        necesaria para ejecutar el algoritmo.
+      </li>
+      <br />
+      <li>
+        <strong>Estabilidad: </strong>Se dice que un algoritmo de ordenamiento
+        es estable si el orden relativo de elementos iguales se conserva después
+        de la clasificación. Esto es importante en determinadas aplicaciones
+        donde se debe mantener el orden original de elementos iguales.
+      </li>
+      <br />
+      <li>
+        <strong>Adaptabilidad: </strong>Un algoritmo de ordenamiento adaptativo
+        es aquel que aprovecha el orden preexistente en los datos para mejorar
+        el rendimiento.
+      </li>
+      <br />
+    </ul>
+
+    <!--aplicaciones -->
+    <h1>Aplicaciones de los algoritmos de ordenamiento</h1>
+    <ul>
+      <li><h3>Algoritmos de búsqueda:</h3></li>
+      <p>
+        El ordenamiento es a menudo un paso crucial en algoritmos de búsqueda
+        como la búsqueda binaria, donde los datos deben estar ordenados antes de
+        buscar un elemento específico.
+      </p>
+      <li><h3>Gestión de datos:</h3></li>
+      <p>Ordenar datos facilita la búsqueda, recuperación y análisis.</p>
+      <li><h3>Optimización de bases de datos:</h3></li>
+      <p>
+        Ordenar datos en bases de datos mejora el rendimiento de las consultas.
+      </p>
+      <li><h3>Análisis de datos:</h3></li>
+      <p>
+        El ordenamiento ayuda a identificar patrones, tendencias y valores
+        atípicos en conjuntos de datos. Juega un papel vital en el análisis
+        estadístico, modelado financiero y otros campos basados en datos.
+      </p>
+      <li><h3>Sistemas operativos:</h3></li>
+      <p>
+        Los algoritmos de ordenamiento se utilizan en sistemas operativos para
+        tareas como la programación de tareas, la gestión de memoria y la
+        organización del sistema de archivos.
+      </p>
+      <li><h3>Aprendizaje automático:</h3></li>
+      <p>
+        El ordenamiento se utiliza para preparar datos para entrenar modelos de
+        aprendizaje automático.
+      </p>
+    </ul>
+
+    <h1 id="Algoritmos">Algunos algoritmos de ordenamiento comunes</h1>
+    <p>Algunos de los algoritmos de ordenación más comunes son:</p>
+    <ul>
+      <li>
+        <a href="#Bubble"><h3>Bubble Sort</h3></a>
+      </li>
+      <li>
+        <a href="#Selection"><h3>Selection sort</h3></a>
+      </li>
+      <li>
+        <a href="#Insertion"><h3>Insertion sort</h3></a>
+      </li>
+      <li>
+        <a href="#Merge"><h3>Merge sort</h3></a>
+      </li>
+      <li>
+        <a href="#Quick"><h3>Quick sort</h3></a>
+      </li>
+    </ul>
+    <!--Bubble sort-->
+    <div>
+      <h1 class="titulo" id="Bubble">Bubble Sort</h1>
+      <hr />
+      <p>
+        Bubble Sort es el algoritmo de ordenamiento más simple que funciona
+        intercambiando repetidamente los elementos adyacentes si están en el
+        orden incorrecto. Este algoritmo no es adecuado para conjuntos de datos
+        grandes ya que su complejidad temporal promedio y en el peor de los
+        casos es bastante alta.
+      </p>
+      <div class="caja">
+        <h1>¿Cómo funciona el Bubble Sort?</h1>
+        <p>Bubble sort funciona de la siguiente manera:</p>
+        <ol>
+          <li>
+            Compara pares de elementos adyacentes en la lista y los intercambia
+            si están en el orden incorrecto.Después del primer paso, el elemento
+            más grande de la lista estará en su posición final.
+          </li>
+          <li>
+            Luego, se repite este proceso para cada par de elementos adyacentes
+            restantes, hasta que toda la lista esté ordenada.
+          </li>
+          <li>
+            En cada iteración, el siguiente elemento más grande se coloca en su
+            posición correcta.
+          </li>
+          <li>
+            El proceso se repite hasta que no se necesiten más intercambios, lo
+            que indica que la lista está ordenada.
+          </li>
+        </ol>
+      </div>
+      <h1 class="ventajas">Ventajas del Bubble Sort:</h1>
+      <ul>
+        <li>Bubble sort es fácil de entender e implementar.</li>
+        <li>No requiere espacio de memoria adicional.</li>
+        <li>
+          Es un algoritmo de ordenamiento estable, lo que significa que los
+          elementos con el mismo valor clave mantienen su orden relativo en la
+          salida ordenada.
+        </li>
+      </ul>
+      <h1 class="desventajas">Desventajas del Bubble Sort:</h1>
+      <ul>
+        <li>
+          Bubble sort tiene una complejidad temporal de O(N2), lo que lo hace
+          muy lento para conjuntos de datos grandes.
+        </li>
+        <li>
+          Bubble sort es un algoritmo de ordenamiento basado en comparaciones,
+          lo que significa que requiere un operador de comparación para
+          determinar el orden relativo de los elementos en el conjunto de datos
+          de entrada. Esto puede limitar la eficiencia del algoritmo en ciertos
+          casos.
+        </li>
+      </ul>
+    </div>
+    <!--Selection sort-->
+    <div>
+      <h1 class="titulo" id="Selection">Selection Sort</h1>
+      <hr />
+      <p>
+        El selection sort es un algoritmo de ordenamiento simple y eficiente que
+        funciona seleccionando repetidamente el elemento más pequeño (o más
+        grande) de la porción no ordenada de la lista y moviéndolo a la porción
+        ordenada de la lista.
+      </p>
+      <div class="caja">
+        <h1>¿Cómo funciona el Selection Sort?</h1>
+        <p>Selection sort funciona de la siguiente manera:</p>
+        <ol>
+          <li>
+            <b>División de la lista:</b> El algoritmo divide la lista de
+            elementos en dos partes: una parte ordenada y otra parte no
+            ordenada. Al principio, la parte ordenada está vacía y la parte no
+            ordenada contiene todos los elementos.
+          </li>
+          <li>
+            <b>Selección del elemento más pequeño:</b> El algoritmo busca el
+            elemento más pequeño en la parte no ordenada de la lista y lo
+            selecciona.
+          </li>
+          <li>
+            <b>Intercambio:</b> Una vez que se ha encontrado el elemento más
+            pequeño, se intercambia con el primer elemento de la parte no
+            ordenada. Esto significa que el elemento más pequeño se mueve a la
+            parte ordenada, y la parte ordenada se incrementa en uno, mientras
+            que la parte no ordenada se reduce en uno.
+          </li>
+          <li>
+            <b>Repetición:</b> Los pasos 2 y 3 se repiten para el resto de
+            elementos en la parte no ordenada. En cada iteración, se selecciona
+            el elemento más pequeño de la parte no ordenada y se intercambia con
+            el primer elemento de la parte no ordenada.
+          </li>
+          <li>
+            <b>Finalización:</b> Una vez que todos los elementos han sido
+            seleccionados y movidos a la parte ordenada, la lista está
+            completamente ordenada.
+          </li>
+        </ol>
+      </div>
+      <h1 class="ventajas">Ventajas del Selection Sort:</h1>
+      <ul>
+        <li>Simple y fácil de entender.</li>
+        <li>Funciona bien con conjuntos de datos pequeños.</li>
+      </ul>
+      <h1 class="desventajas">Desventajas del Selection Sort:</h1>
+      <ul>
+        <li>No funciona bien en conjuntos de datos grandes.</li>
+        <li>
+          No conserva el orden relativo de los elementos con claves iguales, lo
+          que significa que no es estable.
+        </li>
+      </ul>
+    </div>
+    <!--Insertion sort-->
+    <div>
+      <h1 class="titulo" id="Insertion">Insertion Sort</h1>
+      <hr />
+      <p>
+        El ordenamiento por inserción es un algoritmo de ordenamiento simple que
+        funciona insertando iterativamente cada elemento de una lista no
+        ordenada en su posición correcta en una porción ordenada de la lista. Es
+        un algoritmo de ordenamiento estable, lo que significa que los elementos
+        con valores iguales mantienen su orden relativo en la salida ordenada.
+        <br />
+        El ordenamiento por inserción es como ordenar cartas en tus manos.
+        Divides las cartas en dos grupos: las cartas ordenadas y las cartas
+        desordenadas. Luego, tomas una carta del grupo desordenado y la colocas
+        en el lugar correcto en el grupo ordenado.
+      </p>
+      <div class="caja">
+        <h1>¿Cómo funciona el Insertion Sort?</h1>
+        <p>Insertion sort funciona de la siguiente manera:</p>
+        <ol>
+          <li>
+            <strong>Iteración sobre la lista:</strong> Comenzamos con el segundo
+            elemento de la lista y lo marcamos como el elemento actual.
+          </li>
+          <li>
+            <strong>Comparación e inserción:</strong> Comparamos el elemento
+            actual con los elementos anteriores en la lista ordenada. Si el
+            elemento actual es menor que el elemento comparado, movemos el
+            elemento comparado una posición hacia adelante en la lista y
+            continuamos comparando con el siguiente elemento anterior.
+          </li>
+          <li>
+            <strong>Repetición:</strong> Repetimos el paso 2 hasta encontrar la
+            posición correcta para insertar el elemento actual en la lista
+            ordenada.
+          </li>
+          <li>
+            <strong>Avance:</strong> Avanzamos al siguiente elemento de la lista
+            y repetimos los pasos 2 y 3 hasta que todos los elementos estén en
+            su posición correcta.
+          </li>
+          <li>
+            <strong>Lista ordenada:</strong> Una vez que hemos recorrido toda la
+            lista, todos los elementos estarán en su posición correcta y la
+            lista estará ordenada.
+          </li>
+        </ol>
+      </div>
+      <h1 class="ventajas">Ventajas del Insertion sort:</h1>
+      <ul>
+        <li>Simple y fácil de implementar.</li>
+        <li>Algoritmo de ordenamiento estable.</li>
+        <li>Eficiente para listas pequeñas y listas casi ordenadas.</li>
+        <li>Eficiente en el uso del espacio.</li>
+      </ul>
+      <h1 class="desventajas">Desventajas del Insertion sort:</h1>
+      <ul>
+        <li>Ineficiente para listas grandes.</li>
+        <li>
+          No tan eficiente como otros algoritmos de ordenamiento (por ejemplo,
+          merge sort, quick sort) en la mayoría de los casos.
+        </li>
+      </ul>
+    </div>
+    <!--Merge sort-->
+    <div>
+      <h1 class="titulo" id="Merge">Merge Sort</h1>
+      <hr />
+      <p>
+        Merge sort es un algoritmo de ordenamiento que sigue el enfoque de
+        divide y vencerás. Funciona dividiendo recursivamente el array de
+        entrada en subarrays más pequeños y ordenando esos subarrays, luego
+        fusionándolos de nuevo para obtener el array ordenado.
+        <br />En términos simples, podemos decir que el proceso de merge sort
+        consiste en dividir el array en dos mitades, ordenar cada mitad y luego
+        fusionar las mitades ordenadas de nuevo. Este proceso se repite hasta
+        que todo el array esté ordenado.
+      </p>
+      <div class="caja">
+        <h1>¿Cómo funciona el Merge Sort?</h1>
+        <p>Merge sort funciona de la siguiente manera:</p>
+        <ol>
+          <li>
+            <strong>Divide y conquista:</strong> Merge Sort sigue el principio
+            de "divide y conquista". Primero, divide la lista no ordenada en
+            sublistas más pequeñas hasta que cada sublista contenga un solo
+            elemento. Estas sublistas de un solo elemento se consideran
+            ordenadas.
+          </li>
+
+          <li>
+            <strong>Fusión (Merge):</strong> Luego, fusiona recursivamente las
+            sublistas en pares ordenados. Compara los elementos de las sublistas
+            emparejadas y los fusiona en una lista ordenada más grande. Este
+            proceso de fusión se repite hasta que solo queda una lista ordenada
+            completa.
+          </li>
+
+          <li>
+            <strong>Ejemplo paso a paso:</strong>
+            <ol type="a">
+              <li>
+                <strong>División:</strong> Para una lista
+                <b> [38, 27, 43, 3, 9, 82, 10]</b>, el proceso de división lo
+                dividiría en sublistas más pequeñas, por ejemplo,<b>
+                  [[38], [27], [43], [3], [9], [82], [10]]</b
+                >.
+              </li>
+              <li>
+                <strong>Fusión:</strong> Luego, se fusionarían las sublistas en
+                pares ordenados. Por ejemplo,
+                <b>[[27, 38], [3, 43], [9, 82], [10]]</b>. Luego, estas
+                sublistas se fusionarían en una lista ordenada final.
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </div>
+      <h1 class="ventajas">Ventajas del Merge sort:</h1>
+      <ul>
+        <li>
+          <b>Estabilidad:</b> Merge sort es un algoritmo de ordenamiento
+          estable, lo que significa que mantiene el orden relativo de los
+          elementos iguales en el array de entrada.
+        </li>
+        <li>
+          <b>Rendimiento garantizado en el peor caso:</b> Merge sort tiene una
+          complejidad temporal en el peor caso de O(N logN), lo que significa
+          que funciona bien incluso en conjuntos de datos grandes.
+        </li>
+        <li>
+          <b>Simple de implementar:</b> El enfoque de divide y vencerás es
+          directo.
+        </li>
+      </ul>
+      <h1 class="desventajas">Desventajas del Merge sort:</h1>
+      <ul>
+        <li>
+          <b>Complejidad espacial:</b> Merge sort requiere memoria adicional
+          para almacenar los subarrays fusionados durante el proceso de
+          ordenamiento.
+        </li>
+        <li>
+          <b>No es in-place:</b> Merge sort no es un algoritmo de ordenamiento
+          in-place, lo que significa que requiere memoria adicional para
+          almacenar los datos ordenados. Esto puede ser una desventaja en
+          aplicaciones donde el uso de memoria es una preocupación.
+        </li>
+      </ul>
+    </div>
+    <!--Quick sort-->
+    <div>
+      <h1 class="titulo" id="Quick">Quick Sort</h1>
+      <hr />
+      <p>
+        QuickSort es un algoritmo de ordenamiento basado en el algoritmo Divide
+        y Vencerás que selecciona un elemento como pivote y particiona el array
+        dado alrededor del pivote seleccionado colocando el pivote en su
+        posición correcta en el array ordenado.
+      </p>
+      <div class="caja">
+        <h1>¿Cómo funciona el Quick Sort?</h1>
+        <p>Quick sort funciona de la siguiente manera:</p>
+        <ol>
+          <li>
+            <strong>Selección del pivote:</strong> Selecciona un elemento de la
+            lista como pivote. El pivote puede ser cualquier elemento de la
+            lista, pero generalmente se elige el primer elemento, el último
+            elemento o un elemento al azar.
+          </li>
+          <li>
+            <strong>Partición:</strong> Reordena los elementos de la lista de
+            manera que todos los elementos con valores menores que el pivote
+            estén antes de él y todos los elementos con valores mayores estén
+            después. Después de este proceso, el pivote estará en su posición
+            final en la lista ordenada. Este paso se llama partición.
+          </li>
+          <li>
+            <strong>Recursión:</strong> Aplica recursivamente los pasos 1 y 2 a
+            las sublistas de elementos menores que el pivote y mayores que el
+            pivote. Esto ordenará cada sublista de manera independiente.
+          </li>
+          <li>
+            <strong>Combinación:</strong> No es necesario realizar una etapa de
+            combinación en Quick Sort, ya que la lista se va ordenando en su
+            lugar a medida que se particionan y se ordenan las sublistas.
+          </li>
+          <li>
+            <strong>Caso base:</strong> La recursión se detiene cuando las
+            sublistas tienen cero o un elemento, ya que estas sublistas están
+            ordenadas por definición.
+          </li>
+        </ol>
+      </div>
+      <h1 class="ventajas">Ventajas del Quick sort:</h1>
+      <ul>
+        <li>
+          Es un algoritmo de divide y vencerás que facilita la resolución de
+          problemas.
+        </li>
+        <li>Es eficiente en conjuntos de datos grandes.</li>
+        <li>
+          Tiene un bajo costo, ya que solo requiere una pequeña cantidad de
+          memoria para funcionar.
+        </li>
+      </ul>
+      <h1 class="desventajas">Desventajas del Quick sort:</h1>
+      <ul>
+        <li>
+          Tiene una complejidad temporal en el peor caso de O(N^2), lo que
+          ocurre cuando el pivote se elige pobremente.
+        </li>
+        <li>No es una buena opción para conjuntos de datos pequeños.</li>
+        <li>
+          No es un ordenamiento estable, lo que significa que si dos elementos
+          tienen la misma clave, su orden relativo no se preservará en la salida
+          ordenada en el caso de quick sort, porque aquí estamos intercambiando
+          elementos según la posición del pivote (sin considerar sus posiciones
+          originales).
+        </li>
+      </ul>
+    </div>
+    <a href="#Algoritmos" 
+      ><button type="button">Regresar al inicio</button></a
+    >
+  </body>
+</html>

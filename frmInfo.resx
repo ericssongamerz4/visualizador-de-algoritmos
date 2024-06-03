@@ -117,30 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label5.Text" xml:space="preserve">
-    <value>1.- Complejidad temporal: Es una medida de cuánto tiempo lleva ejecutar un algoritmo, se utiliza para categorizar los algoritmos de ordenamiento. El rendimiento en el peor de los casos, el caso promedio y el mejor de los casos de un algoritmo de clasificación se puede utilizar para cuantificar la complejidad temporal del proceso. 
-
-2.- Complejidad espacial: Los algoritmos de ordenamiento también tienen complejidad espacial, que es la cantidad de memoria necesaria para ejecutar el algoritmo. 
-
-3.- Estabilidad: Se dice que un algoritmo de ordenamiento es estable si el orden relativo de elementos iguales se conserva después de la clasificación. Esto es importante en determinadas aplicaciones donde se debe mantener el orden original de elementos iguales. 
-
-4.- Adaptabilidad: Un algoritmo de ordenamiento adaptativo es aquel que aprovecha el orden preexistente en los datos para mejorar el rendimiento.
-</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Un algoritmo de ordenamiento es un conjunto de instrucciones o reglas definidas que se utilizan para organizar los elementos de una lista en un orden específico, como numérico, alfabético, u otro criterio definido. </value>
-  </data>
-  <data name="label9.Text" xml:space="preserve">
-    <value>Para la segunda posición, donde está presente 25, nuevamente recorremos el resto del array de manera secuencial.
-Después de recorrer, encontramos que 12 es el segundo valor más bajo en el array y debería aparecer en el segundo lugar en el array, por lo que intercambiamos estos valores.
-</value>
-  </data>
-  <data name="label19.Text" xml:space="preserve">
-    <value>Selection sort es un algoritmo de ordenamiento simple y eficiente que funciona seleccionando repetidamente el elemento más pequeño (o más grande) de la parte no ordenada de la lista y moviéndolo a la parte ordenada de la lista.</value>
-  </data>
-  <data name="label26.Text" xml:space="preserve">
-    <value>Para la primera posición en el array ordenado, se recorre todo el array desde el índice 0 hasta el 4 secuencialmente. La primera posición donde se encuentra 64 actualmente, después de recorrer todo el array, está claro que 11 es el valor más bajo.
-Por lo tanto, se reemplaza 64 con 11. Después de una iteración, 11, que resulta ser el valor más pequeño en el array, tiende a aparecer en la primera posición de la lista ordenada.
-</value>
-  </data>
 </root>

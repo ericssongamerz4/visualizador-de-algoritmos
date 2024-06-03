@@ -100,9 +100,6 @@ namespace visualizador_de_algoritmos
                     await QuickSort(arr, 0, arr.Length - 1);
                     break;
 
-                case "MERGE SORT":
-                    break;
-
                 default:
                     break;
             }
@@ -235,7 +232,6 @@ namespace visualizador_de_algoritmos
             EstaOrdenando(false);
             GenerarGrafica(arr); // Update the chart after sorting is completed
         }
-
         private async Task QuickSort(int[] arr, int low, int high)
         {
             if (low < high)

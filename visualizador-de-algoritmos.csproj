@@ -156,7 +156,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Imagenes\logo-removebg-preview.png" />
+    <Content Include="Algoritmos\Info General.html" />
+    <Content Include="Algoritmos\styles.css" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\DataSources\" />
